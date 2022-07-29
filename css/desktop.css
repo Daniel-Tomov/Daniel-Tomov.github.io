@@ -29,7 +29,8 @@
     color: white;
     font-weight: 800;
     text-align-last: center;
-    padding-top: 39%;
+    position: relative;
+    top: 76%;
 }
 
 main{
