@@ -4,7 +4,6 @@
     padding: 0;
     list-style-type: none;
     color: black;
-    font-family:"industry", helvetica, arial, sans-serif;
 }
 
 #entry{
@@ -24,10 +23,11 @@
 } 
 
 #entry-name{
-    font-family: "industry-inc-outline", helvetica, arial, sans-serif;
+    font-family: bungee, sans-serif;
+    font-weight: 800;
+    font-style: normal;
     font-size: 40px;
     color: white;
-    font-weight: 800;
     text-align-last: center;
     position: relative;
     top: 76%;
@@ -42,6 +42,9 @@ main{
 #left{
     float:left;
     width: 60%;
+    font-family: source-serif-pro, serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 #right{
@@ -50,13 +53,22 @@ main{
 }
 
 .heading{
-    font-family: "industry", helvetica, sans-serif;
-    font-weight: 600;
+    font-family: source-serif-pro, serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.description{
+    font-family: source-serif-pro, serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .description a{
     color: #0000EE;
     text-decoration: underline;
+    font-weight: 400;
 }
 
 .divider{
