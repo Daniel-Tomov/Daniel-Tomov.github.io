@@ -11,11 +11,32 @@
 		<link rel="stylesheet" type="text/css" media="(min-width:501px) and (max-width:900px)" href="css/tablet.css">
 		<link rel="stylesheet" type="text/css" media="screen and (max-width:500px)" href="css/mobile.css">
 		<link rel="stylesheet" type="text/css" media="screen and (min-width:901px)" href="css/desktop.css">
+        <script>
+				var image1=new Image();
+				image1.src="images/daniel-tomov.JPG";
+				var image2=new Image();
+					image2.src="images/mate.jpg";
+				var image3=new Image();
+					image3.src="images/tsa.jpg";
+				var image4=new Image();
+					image4.src="";
+		</script>
     </head>
 
     <body>
         <div id="entry">
-            <p>fa</p>
+			<img name="slide" id="slideshow" src="images/daniel-tomov.JPG"/>
+			<script>
+				var step=1;
+				function slideit() {
+					document.images.slide.src=eval("image"+step+".src");
+					//document.getElementById("entry").style.backgroundImage='url(eval("image"+step+".src"))';
+                    if(step<4) {step++; }
+                    else {step = 1; }
+				    setTimeout("slideit()",5000);
+				}
+				slideit();
+			</script>
 
         </div>
 

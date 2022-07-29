@@ -10,11 +10,18 @@
 #entry{
     width: 100%;
     min-height: 600px;
-    background-image: url(../images/original.jpg);
+/*    background-image: url(../images/original.jpg);
     background-size: auto 650px;
     background-repeat: no-repeat;
     background-position: top center;
+    */
     background-color:black;
+}
+
+#entry img{
+    max-height: 600px;
+    margin: 0 auto;
+    display: block;
 }
 
 main p{
