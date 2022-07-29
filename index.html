@@ -8,6 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="High School student that loves technology and computers. Does 3D modeling, Programming (Python and Java), Microsoft Office, Video editing, and Robotics">
 		<title>Daniel Tomov</title>
+		<link rel="stylesheet" href="https://use.typekit.net/vic3gzo.css">
 		<link rel="stylesheet" type="text/css" media="(min-width:501px) and (max-width:900px)" href="css/tablet.css">
 		<link rel="stylesheet" type="text/css" media="screen and (max-width:500px)" href="css/mobile.css">
 		<link rel="stylesheet" type="text/css" media="screen and (min-width:901px)" href="css/desktop.css">
@@ -25,7 +26,7 @@
 
     <body>
         <div id="entry">
-			<img name="slide" id="slideshow" src="images/main.jpg"/>
+			<!--<img name="slide" id="slideshow" src="images/main.jpg"/> -->
 			<!--
 			<script>
 				var step=1;
@@ -39,20 +40,42 @@
 				slideit();
 			</script>
 -->
+			<p id="entry-name">Daniel Tomov</p>
         </div>
 
         <main>
-            <p>Daniel Tomov is a productive student that has a passion for technology. He is able to 3D model in Blender, Program in Python and Java, Video Edit with both Premiere Pro and Davinci Resolve, and edit photos with Photoshop.</p>
-            <p>Daniel has recieved many certifications throughout his education including Microsoft Office Associate, CompTIA Security+, MTA Database Administration, IC3 (Internet and Computing Core), and CTECS Workplace Readiness. </p>
-        </main>
+			<div id="left">
+				<p>Daniel Tomov is a productive student that has a passion for technology. He is able to 3D model in Blender, Program in Python and Java, Video Edit with both Premiere Pro and Davinci Resolve, and edit photos with Photoshop.</p>
+				
+				<div class="divider"></div>
+				
+				<p>Daniel has recieved many certifications throughout his education including Microsoft Office Associate, CompTIA Security+, MTA Database Administration, IC3 (Internet and Computing Core), and CTECS Workplace Readiness. </p>
+			</div>
+			<div id="right">
+				<p class="heading">Certifications:</p>
+				<p class="description">IC3 (2019)</p>
+				<p class="description">CTECS Workplace Readiness (2020)</p>
+				<p class="description">Microsoft Office Associate (2021)</p>
+				<p class="description">MTA Database Administration (2022)</p>
+				<p class="description">CompTIA Security+ (2022)</p>
+				
+				<div class="divider"></div>
+
+				<p class="heading">Social Media:</p>
+				<p class="description">LinkedIn: <a href="https://www.linkedin.com/in/daniel-tomov-963b33242/">Daniel Tomov</a></p>
+				<p class="description">Github: <a href="https://github.com/Daniel-Tomov">Daniel-Tomov</a></p>
+				<p class="description">Youtube: <a href="https://www.youtube.com/channel/UCUVEqe302eSgApI5qHvna3Q">Daniel Tomov</a></p>
+				<p class="description">Twitter: <a href="https://twitter.com/Daniel_Tomov">@Daniel_Tomov</a></p>
+			
+			</div>
+		</main>
 
         <footer>
             Copyright Daniel Tomov &copy; 2022 
         </footer>
 
 		<script>
-			document.getElementById("entry").style.height=window.innerHeight + "px"
-			document.getElementById("slideshow").style.height=window.innerHeight + "px"
+			document.getElementById("entry").style.backgroundSize="auto " + window.innerHeight + "px";
 		</script>
     </body>
 </html>
