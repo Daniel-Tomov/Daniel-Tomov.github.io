@@ -25,7 +25,8 @@
 
     <body>
         <div id="entry">
-			<img name="slide" id="slideshow" src="images/daniel-tomov.JPG"/>
+			<img name="slide" id="slideshow" src="images/main.jpg"/>
+			<!--
 			<script>
 				var step=1;
 				function slideit() {
@@ -37,7 +38,7 @@
 				}
 				slideit();
 			</script>
-
+-->
         </div>
 
         <main>
@@ -48,5 +49,10 @@
         <footer>
             Copyright Daniel Tomov &copy; 2022 
         </footer>
+
+		<script>
+			document.getElementById("entry").style.height=window.innerHeight + "px"
+			document.getElementById("slideshow").style.height=window.innerHeight + "px"
+		</script>
     </body>
 </html>
