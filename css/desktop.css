@@ -1,10 +1,3 @@
-*, html, body, a, p, li, ol{
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    color: black;
-}
 
 #entry{
     width: 100%;
@@ -22,21 +15,16 @@
     display: block;
 } 
 
-#entry-name{
-    font-family: bungee, sans-serif;
-    font-weight: 800;
-    font-style: normal;
-    font-size: 40px;
-    color: white;
-    text-align-last: center;
-    position: relative;
-    top: 76%;
+main{
+    width: 100%;
+    height: fit-content;
+    margin: 25px auto 0 auto;
 }
 
-main{
+#intro{
     width: 65%;
-    height: 100%;
-    margin: 25px auto 0 auto;
+    height: fit-content;
+    margin: 0 auto;
 }
 
 #left{
@@ -52,11 +40,69 @@ main{
     width: 30%;
 }
 
-.heading{
+#certifications{
+    background-color: #EEE; 
+}
+
+.cert{ 
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#certs{
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.cert-img{
+    border:#0000EE;
+    height: 200px;
+    margin: 0 auto;
+    display:block;
+}
+
+
+footer{
+    position: relative;
+    clear: both;
+    padding: 100px 0 50px 0;
+}
+
+
+
+
+
+
+*, html, body, a, p, li, ol{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    color: black;
+}
+
+.white{color:white;}
+.black{color:black;}
+.left{float:left;}.right{float:right;}.clear{clear:both;}
+.links{color: #0000EE; text-decoration: underline;}
+.center{text-align:center}
+
+h1{
+    font-family: bungee, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 40px;
+    position: relative;
+    top: 76%;
+}
+
+h2{
     font-family: source-serif-pro, serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .description{
@@ -66,18 +112,11 @@ main{
 }
 
 .description a{
-    color: #0000EE;
-    text-decoration: underline;
     font-weight: 400;
 }
 
+
 .divider{
     padding: 10px 0;
-}
-
-footer{
-    position: relative;
-    clear: both;
-    padding: 100px 0 50px 0;
-    text-align: center;
+    clear:both;
 }
