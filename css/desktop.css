@@ -40,29 +40,43 @@ main{
     width: 30%;
 }
 
-#certifications{
+.section{
     background-color: #EEE; 
 }
 
-.cert{ 
-    width: 400px;
-    height: 400px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-#certs{
+.holder{
     width: fit-content;
     margin: 0 auto;
 }
 
-.cert-img{
-    border:#0000EE;
-    height: 200px;
+.cert{ 
+    width: 400px;
+    height: 370px;
     margin: 0 auto;
+    text-align: center;
+}
+
+.cert-img{
+    /*border:#0000EE;*/
+    height: 200px;
+    margin: 0 auto 20px auto;
     display:block;
 }
 
+.accomplishment{ 
+    width: 500px;
+    height: 500x;
+    margin: 0 auto 20px auto;
+    text-align: center;
+}
+
+.accomplishment-img{
+    /*border:#0000EE;*/
+    height: 500px;
+    width: auto;
+    display:block;
+    margin: 0 auto;
+}
 
 footer{
     position: relative;
@@ -103,6 +117,7 @@ h2{
     font-weight: 700;
     font-style: normal;
     font-size: 22px;
+    margin: 0 0 0 10px;
 }
 
 .description{
