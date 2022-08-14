@@ -10,6 +10,7 @@
 		<title>Daniel Tomov</title>
 		<!-- <link rel="stylesheet" href="https://use.typekit.net/vic3gzo.css"> -->
 		<link rel="stylesheet" href="https://use.typekit.net/bsu0rwg.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<!--
 		<link rel="stylesheet" type="text/css" media="(min-width:501px) and (max-width:900px)" href="css/tablet.css">
 		<link rel="stylesheet" type="text/css" media="screen and (max-width:500px)" href="css/mobile.css">
@@ -25,29 +26,40 @@
 					image3.src="images/tsa_edited2.png";
 				var image4=new Image();
 					image4.src="";
+
+				var img1="images/daniel-tomov_edited.png"
+				var img2="images/mate_edited.png"
+				var img3="images/tsa_edited2.png"
 		</script>
     </head>
 
     <body>
-        <div id="entry">
+        <div id="entry" class="section">
 			<div id="slide" class="left">
-				<img class="margin-center" name="slide" id="slideshow" src="images/main.jpg"/>
+				<!--<img class="margin-center" name="slide" id="slideshow" src="images/daniel-tomov_edited.png"/> -->
 				<script>
-					var step=3;
+					var step=1;
 					function slideit() {
-						document.images.slide.src=eval("image"+step+".src");
-						//document.getElementById("entry").style.backgroundImage='url(eval("image"+step+".src"))';
+						//document.images.slide.src=eval("image"+step+".src");
+						document.getElementById("slide").style.backgroundImage='url(img)'.replace('img', eval("img" + step));
 						if(step<3) {step++; }
 						else {step = 1; }
 						setTimeout("slideit()",2000);
 					}
 					slideit();
 				</script>
-
-				<h1 class="white center">Daniel Tomov</h1>
+			</div>
+			<div id="about" class="right">
+				<h1 id="name" class="white center">Daniel Tomov</h1>
+				<p class="white"><strong class="white">Daniel Tomov is a productive student that has a passion for technology. He is able to 3D model in Blender, program in Python and Java, video edit with both Premiere Pro and Davinci Resolve, and edit photos with Photoshop.</strong></p>
+				
+				<div class="divider"></div>
+				
+				<p class="white">Daniel has recieved many certifications throughout his education including Microsoft Office Associate, CompTIA Security+, MTA Database Administration, IC3 (Internet and Computing Core), and CTECS Workplace Readiness. </p>
+			</div>
 			</div>
 		</div>
-        <main>
+		<!--
 			<div id="intro">
 				<div id="left">
 					<p><strong>Daniel Tomov is a productive student that has a passion for technology. He is able to 3D model in Blender, program in Python and Java, video edit with both Premiere Pro and Davinci Resolve, and edit photos with Photoshop.</strong></p>
@@ -57,7 +69,7 @@
 					<p>Daniel has recieved many certifications throughout his education including Microsoft Office Associate, CompTIA Security+, MTA Database Administration, IC3 (Internet and Computing Core), and CTECS Workplace Readiness. </p>
 				</div>
 				<div id="right">
-					<!--
+
 					<p class="heading">Certifications:</p>
 					<p class="description">IC3 (2019)</p>
 					<p class="description">CTECS Workplace Readiness (2020)</p>
@@ -66,7 +78,7 @@
 					<p class="description">CompTIA Security+ (2022)</p>
 					
 					<div class="divider"></div>
--->
+
 					<h2>Social Media:</h2>
 					<p class="description">LinkedIn: <a class="links" href="https://www.linkedin.com/in/daniel-tomov-963b33242/">Daniel Tomov</a></p>
 					<p class="description">Github: <a class="links" href="https://github.com/Daniel-Tomov">Daniel-Tomov</a></p>
@@ -75,74 +87,100 @@
 				
 				</div>
 			</div>
+		
 
 			<div class="divider"></div><div class="divider"></div><div class="divider"></div>
-
-			<div class="clear section">
-				<h1 class="black center">Certifications</h1>
-				<div class="divider"></div><div class="divider"></div>
-				<div class="even-space" class="holder">
-					<div class="cert">
-						<h2>IC3 (Internet and Computing Core)</h2>
-						<img class="cert-img" src="images/ic3.jpg" alt="IC3 Certification image"/>
-						<p class="description">Earned in IT Fundamentals during the 2019-2020 school year at Landstown High School. The course covered the Microsoft Office suite and web design.</p>
-					</div>
-					<div class="cert">
-						<h2>CTECS Workplace Readiness</h2>
-						<img class="cert-img" src="images/workplaceReadiness.png" alt="Workplace Readiness Certification image"/>
-						<p class="description">Earned in the 2020-2021 school year.<!-- The test consists of 100 situations that may be seen in the workplace. Landstowh High School requires all students in the academy to have this certification.--></p>
-					</div>
-					<div class="cert">
-						<h2>Microsoft Office Associate</h2>
-						<img class="cert-img" src="images/office.svg" alt="Microsoft Office Associate Certification image"/>
-						<p class="description">Earned in Computer information Systems during the 2020-2021 school year. The course covers a portion of the Microsoft 2019 Office Suite (Word, PowerPoint, and Excel).</p>
-					</div>
-					<div class="cert">
-						<h2>MTA Database Administration</h2>
-						<img class="cert-img" src="images/mtaDatabase.png" alt="MTA Database Administraion Certification image"/>
-						<p class="description">Earned in Database Management and Administration during the 2021-2022 school year. The course uses the Oracle Academy program for the lessons.</p>
-					</div>
-					<div class="cert">
-						<h2>CompTIA Security+</h2>
-						<img class="cert-img" src="images/securityPlus.png" alt="CompTIA Security+ Certification image"/>
-						<p class="description">Taken outside of a class at school.</p>
-					</div>
+-->
+		<div id="certifications" class="white clear section">
+			<h1 class="white center">Certifications</h1>
+			<div class="divider"></div><div class="divider"></div>
+			<div class="even-space holder">
+				<div class="cert">
+					<h2 class="white">IC3 (Internet and Computing Core)</h2>
+					<img class="cert-img" src="images/ic3.jpg" alt="IC3 Certification image"/>
+				<!--<p class="description">Earned in IT Fundamentals during the 2019-2020 school year at Landstown High School. The course covered the Microsoft Office suite and web design.</p>-->
 				</div>
-				<p class="description clear center">For more information, go to my <a class="links" href="https://www.linkedin.com/in/daniel-tomov-963b33242/details/certifications/">LinkedIn</a></p>
-				<div class="divider"></div>
-				<!--
-				<div class="item">
-					<p class="heading"></p>
-					<img class="item-mg" href=""/>
+				<div class="cert">
+					<h2 class="white">CTECS Workplace Readiness</h2>
+					<img class="cert-img" src="images/workplaceReadiness.png" alt="Workplace Readiness Certification image"/>
+					<!--<p class="description">Earned in the 2020-2021 school year.<!-- The test consists of 100 situations that may be seen in the workplace. Landstowh High School requires all students in the academy to have this certification.--></p>
 				</div>
-				-->
-				<div class="divider"></div>
+				<div class="cert">
+					<h2 class="white">Microsoft Office Associate</h2>
+					<img class="cert-img" src="images/office.svg" alt="Microsoft Office Associate Certification image"/>
+					<!--<p class="description">Earned in Computer information Systems during the 2020-2021 school year. The course covers a portion of the Microsoft 2019 Office Suite (Word, PowerPoint, and Excel).</p>-->
+				</div>
+				<div class="cert">
+					<h2 class="white">MTA Database Administration</h2>
+					<img class="cert-img" src="images/mtaDatabase.png" alt="MTA Database Administraion Certification image"/>
+					<!--<p class="description">Earned in Database Management and Administration during the 2021-2022 school year. The course uses the Oracle Academy program for the lessons.</p>-->
+				</div>
+				<div class="cert">
+					<h2 class="white"	>CompTIA Security+</h2>
+					<img class="cert-img" src="images/securityPlus.png" alt="CompTIA Security+ Certification image"/>
+					<!--<p class="description">Taken outside of a class at school.</p>-->
+				</div>
 			</div>
-			
-			<div id="certifications" class="clear">
-				<h1 class="black center">Accomplishments</h1>
-				<div class="divider"></div><div class="divider"></div>
-				<div class="even-space">
-					<div class="accomplishment">
-						<h2>MATE ROV Competitions</h2>
-						<img class="accomplishment-img" src="images/mate.jpg" alt="IC3 Certification image"/>
-						<p class="description">Participating in the Competition for four years, Daniel has led the team at school for three of them. The team made it to the 2022 World Championship.</p>
-					</div>
-					<div class="accomplishment">
-						<h2>TSA 2022</h2>
-						<img class="accomplishment-img" src="images/tsa.jpg" alt="IC3 Certification image"/>
-						<p class="description">This being his fist TSA compeition, Daniel paricipated in the Cybersecurity part of it. It consisted of a Capture the Flag (CTF) challenge. The team recieved third place in the state.</p>
-					</div>
+			<p class="description clear center white">For more information, go to my <a class="links gray" href="https://www.linkedin.com/in/daniel-tomov-963b33242/details/certifications/">LinkedIn</a></p>
+			<div class="divider"></div>
+			<!--
+			<div class="item">
+				<p class="heading"></p>
+				<img class="item-mg" href=""/>
 			</div>
-		</main>
-
+			-->
+			<div class="divider"></div>
+		</div>
+		
+		<div id="awards" class="clear section">
+			<h1 class="white center">Accomplishments</h1>
+			<div class="divider"></div><div class="divider"></div>
+			<div class="even-space">
+				<div class="accomplishment">
+					<h2 class="white">MATE ROV Competitions</h2>
+					<img class="white accomplishment-img" src="images/mate.jpg" alt="IC3 Certification image"/>
+					<p class="white description">Participating in the Competition for four years, Daniel has led the team at school for three of them. The team made it to the 2022 World Championship.</p>
+				</div>
+				<div class="accomplishment">
+					<h2 class="white">TSA 2022</h2>
+					<img class="white accomplishment-img" src="images/tsa.jpg" alt="IC3 Certification image"/>
+					<p class="white description">This being his fist TSA compeition, Daniel paricipated in the Cybersecurity part of it. It consisted of a Capture the Flag (CTF) challenge. The team recieved third place in the state.</p>
+				</div>
+			</div>
+			<div class="divider"></div><div class="divider"></div>
+		</div>
         <footer class="center">
-            <p>Copyright &copy; 2022 Daniel Tomov</p>
+            <p class="white">Copyright &copy; 2022 Daniel Tomov</p>
         </footer>
 
+		<div id="selector">
+			<button id="1" onClick="switch_active(this.id)" class="changers"><i class="fa-solid fa-house"></i></button>
+			<button id="2" onClick="switch_active(this.id)" class="changers"><i class="fa-solid fa-certificate"></i></button>
+			<button id="3" onClick="switch_active(this.id)" class="changers"><i class="fa-solid fa-award"></i></button>
+			<button id="4" onClick="switch_active(this.id)" class="changers"><i class="fa-solid fa-envelope"></i></button>
+		</div>
 		<script>
 			document.getElementById("entry").style.height=window.innerHeight + "px";
 			//document.getElementById("entry").style.backgroundSize="auto " + window.innerHeight + "px";
+
+			document.getElementById("selector").style.top=((window.innerHeight - (document.getElementById("selector").clientHeight)) / 2) + "px";
+
+			var elements = document.getElementsByClassName("section");
+			for (i = 0; i < elements.length; i++){
+				elements[i].style.display='none';
+			}
+
+			document.getElementById("entry").style.display='block';
+
+			function switch_active(clicked_id){
+				var sections = ['entry','certifications', 'awards'];
+				var elements = document.getElementsByClassName("section");
+				for (i = 0; i < elements.length; i++){
+					elements[i].style.display='none';
+				}
+
+				document.getElementById(sections[clicked_id - 1]).style.display='block';
+			}
 		</script>
     </body>
 </html>

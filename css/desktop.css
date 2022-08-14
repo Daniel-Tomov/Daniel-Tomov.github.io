@@ -1,18 +1,40 @@
+:root{
+    --black: #000;
+    --white: #fff;
+    --blue: #0000EE;
+    --gray: #d4d4d4;
+    --dark-gray: #383838;
+    --button-dimensions: 75px;
+}
+
 
 #entry{
     width: 100%;
-    height: 600px;
-    /*background-image: url(../images/main.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: top center;*/
-    background-color:black;
+    height: fit-content;
+    min-height: 600px;
+    background-color: var(--black);
 }
 
-#slide{width: 40%;height:inherit}
+#slide{
+    width: 40%;
+    height:inherit;
+    background-image: url(../images/daniel-tomov_edited.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: var(--black);
+    background-position: center;
+}
 
 #slide img{
     height:inherit;
+    display: inline-block;
+    vertical-align: middle;   
+}
+
+#about{
+    width:40%;
+    margin-right: 15%;
 }
 
 main{
@@ -41,7 +63,7 @@ main{
 }
 
 .section{
-    background-color: #EEE; 
+    background-color: var(--black);
 }
 
 .holder{
@@ -50,24 +72,26 @@ main{
 }
 
 .cert{ 
-    width: 400px;
-    height: 370px;
+    width: 600px;
+    height: fit-content;
     margin: 0 auto;
     text-align: center;
+    margin: 30px 0;
 }
 
 .cert-img{
     /*border:#0000EE;*/
-    height: 200px;
-    margin: 0 auto 20px auto;
+    height: 150px;
+    margin: 0 auto;
     display:block;
 }
 
 .accomplishment{ 
     width: 500px;
-    height: 500x;
+    height: fit-content;
     margin: 0 auto 20px auto;
     text-align: center;
+    margin: 30px auto;
 }
 
 .accomplishment-img{
@@ -81,9 +105,32 @@ main{
 footer{
     position: relative;
     clear: both;
-    padding: 100px 0 50px 0;
+    padding: 25px 0;
+    background-color: var(--black);
+    color: var(--white);
 }
 
+#selector{
+    position: fixed;
+    right: 0;
+    /*border: var(--blue) 5px dashed;*/
+    width: var(--button-dimensions);
+    height: fit-content;
+}
+
+.changers{
+    width: var(--button-dimensions);
+    height: var(--button-dimensions);
+    font-size:larger;
+    background-color: var(--dark-gray);
+    border: none;
+    margin: 3px 0;
+    border-radius: 20in;
+}
+
+.changers:active{
+    background-color: var(--gray);
+}
 
 
 
@@ -94,20 +141,21 @@ footer{
     margin: 0;
     padding: 0;
     list-style-type: none;
-    color: black;
+    color: var(--black)
 }
 
-.white{color:white;}
-.black{color:black;}
+.white{color:var(--white)}
+.black{color: var(--black)}
+.gray{color: var(--gray) !important}.dark-gray{color:var(--dark-gray) !important}
 .left{float:left;}.right{float:right;}.clear{clear:both;}
-.links{color: #0000EE; text-decoration: underline;}
+.links{color: var(--blue); text-decoration: underline;}
 .center{text-align:center}.margin-center{display:block; margin: 0 auto;}
 
 h1{
     font-family: bungee, sans-serif;
     font-weight: 800;
     font-style: normal;
-    font-size: 40px;
+    font-size: 50px;
     position: relative;
     top: 76%;
 }
@@ -116,9 +164,11 @@ h2{
     font-family: source-serif-pro, serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 22px;
+    font-size: 32px;
     margin: 0 0 0 10px;
 }
+
+p{font-size:18px;}
 
 .description{
     font-family: source-serif-pro, serif;
@@ -129,7 +179,6 @@ h2{
 .description a{
     font-weight: 400;
 }
-
 
 .divider{
     padding: 10px 0;
