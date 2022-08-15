@@ -57,7 +57,6 @@
 				
 				<p class="white">Daniel has recieved many certifications throughout his education including Microsoft Office Associate, CompTIA Security+, MTA Database Administration, IC3 (Internet and Computing Core), and CTECS Workplace Readiness. </p>
 			</div>
-			</div>
 		</div>
 		<!--
 			<div id="intro">
@@ -66,7 +65,7 @@
 					
 					<div class="divider"></div>
 					
-					<p>Daniel has recieved many certifications throughout his education including Microsoft Office Associate, CompTIA Security+, MTA Database Administration, IC3 (Internet and Computing Core), and CTECS Workplace Readiness. </p>
+					<p>Daniel has received many certifications throughout his education including Microsoft Office Associate, CompTIA Security+, MTA Database Administration, IC3 (Internet and Computing Core), and CTECS Workplace Readiness. </p>
 				</div>
 				<div id="right">
 
@@ -93,7 +92,7 @@
 -->
 		<div id="certifications" class="white clear section">
 			<h1 class="white center">Certifications</h1>
-			<div class="divider"></div><div class="divider"></div>
+			<div class="divider"></div>
 			<div class="even-space holder">
 				<div class="cert">
 					<h2 class="white">IC3 (Internet and Computing Core)</h2>
@@ -103,7 +102,7 @@
 				<div class="cert">
 					<h2 class="white">CTECS Workplace Readiness</h2>
 					<img class="cert-img" src="images/workplaceReadiness.png" alt="Workplace Readiness Certification image"/>
-					<!--<p class="description">Earned in the 2020-2021 school year.<!-- The test consists of 100 situations that may be seen in the workplace. Landstowh High School requires all students in the academy to have this certification.--></p>
+					<!--<p class="description">Earned in the 2020-2021 school year. The test consists of 100 situations that may be seen in the workplace. Landstowh High School requires all students in the academy to have this certification.</p>-->
 				</div>
 				<div class="cert">
 					<h2 class="white">Microsoft Office Associate</h2>
@@ -134,21 +133,36 @@
 		
 		<div id="awards" class="clear section">
 			<h1 class="white center">Accomplishments</h1>
-			<div class="divider"></div><div class="divider"></div>
-			<div class="even-space">
-				<div class="accomplishment">
-					<h2 class="white">MATE ROV Competitions</h2>
-					<img class="white accomplishment-img" src="images/mate.jpg" alt="IC3 Certification image"/>
-					<p class="white description">Participating in the Competition for four years, Daniel has led the team at school for three of them. The team made it to the 2022 World Championship.</p>
-				</div>
-				<div class="accomplishment">
-					<h2 class="white">TSA 2022</h2>
-					<img class="white accomplishment-img" src="images/tsa.jpg" alt="IC3 Certification image"/>
-					<p class="white description">This being his fist TSA compeition, Daniel paricipated in the Cybersecurity part of it. It consisted of a Capture the Flag (CTF) challenge. The team recieved third place in the state.</p>
-				</div>
+			<div class="divider"></div>
+			<div class="accomplishment">
+				<h2 class="white">MATE ROV Competitions</h2>
+				<img class="white accomplishment-img" src="images/mate.jpg" alt="IC3 Certification image"/>
+				<p class="white description">Participating in the competition for four years, Daniel has been the CEO of the team at school for three of them. The team made it to the 2022 World Championship after winning the Mid-Atlantic Regionals.</p>
+			</div>
+			<div class="accomplishment">
+				<h2 class="white">TSA 2022</h2>
+				<img class="white accomplishment-img" src="images/tsa.jpg" alt="IC3 Certification image"/>
+				<p class="white description">This being his fist TSA compeition, Daniel paricipated in the Cybersecurity part of it. It consisted of a Capture the Flag (CTF) challenge. The team recieved third place in the state.</p>
 			</div>
 			<div class="divider"></div><div class="divider"></div>
 		</div>
+		<div id="social" class="clear section margin-center">
+			<h1 class="white center">Social Media:</h2>
+			<div class="divider"></div>
+			<h2 class="white center">LinkedIn: <a class="links" href="https://www.linkedin.com/in/daniel-tomov-963b33242/">Daniel Tomov</a></h2>
+			<p class="white description">Education and certification information is posted here.</p>
+			<div class="divider"></div>
+			<h2 class="white center">Github: <a class="links" href="https://github.com/Daniel-Tomov">Daniel-Tomov</a></h2>
+			<p class="white description">Any programming that I do is posted here. This includes personal, school, and competitions.</p>
+			<div class="divider"></div>
+			<h2 class="white center">Youtube: <a class="links" href="https://www.youtube.com/channel/UCUVEqe302eSgApI5qHvna3Q">Daniel Tomov</a></h2>
+			<p class="white description">Any videos that I make including personal and school projects.</p>
+			<!--<h2 class="white center">Twitter: <a class="links" href="https://twitter.com/Daniel_Tomov">@Daniel_Tomov</a></h2>
+			<p class="white description">I post updates about compeitions and school here.</p>
+			-->
+			<div class="divider"></div><div class="divider"></div>
+		</div>
+		
         <footer class="center">
             <p class="white">Copyright &copy; 2022 Daniel Tomov</p>
         </footer>
@@ -173,7 +187,7 @@
 			document.getElementById("entry").style.display='block';
 
 			function switch_active(clicked_id){
-				var sections = ['entry','certifications', 'awards'];
+				var sections = ['entry','certifications', 'awards', 'social'];
 				var elements = document.getElementsByClassName("section");
 				for (i = 0; i < elements.length; i++){
 					elements[i].style.display='none';

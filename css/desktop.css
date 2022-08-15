@@ -102,6 +102,15 @@ main{
     margin: 0 auto;
 }
 
+#social{width: 500px;}
+
+#social .description{
+    text-align: center;
+    margin: 10px auto;
+}
+
+#social h2 a{color: var(--gray)}
+
 footer{
     position: relative;
     clear: both;
@@ -112,7 +121,7 @@ footer{
 
 #selector{
     position: fixed;
-    right: 0;
+    right: 20px;
     /*border: var(--blue) 5px dashed;*/
     width: var(--button-dimensions);
     height: fit-content;
@@ -124,12 +133,13 @@ footer{
     font-size:larger;
     background-color: var(--dark-gray);
     border: none;
-    margin: 3px 0;
+    margin: 5px 0;
     border-radius: 20in;
 }
 
-.changers:active{
+.changers:active, .changers:hover{
     background-color: var(--gray);
+    transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 400ms;
 }
 
 
@@ -143,6 +153,8 @@ footer{
     list-style-type: none;
     color: var(--black)
 }
+
+body{background-color: var(--black);}
 
 .white{color:var(--white)}
 .black{color: var(--black)}
