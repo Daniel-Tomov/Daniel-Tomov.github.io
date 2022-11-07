@@ -99,9 +99,7 @@ footer{
 }
 
 
-
-
-
+html{background-color: var(--gray);}
 
 *, html, body, a, p, li, ol{
     text-decoration: none;
