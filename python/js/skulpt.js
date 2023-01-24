@@ -16,7 +16,6 @@ function runit(theCode, destination) {
    var prog = theCode; 
    var mypre = document.getElementById(destination); 
    mypre.innerHTML = '';
-   alert(theCode)
    Sk.pre = destination;
    Sk.configure({
     output:outf,
