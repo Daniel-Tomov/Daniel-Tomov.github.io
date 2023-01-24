@@ -5,7 +5,7 @@
     <meta name="author" content="Daniel Tomov">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Learn to Code with courses designed to change how programming is taught">
-    
+
     <!-- Create a simple CodeMirror instance -->
     <script src="js/codemirror.js"></script>
     <link rel="stylesheet" type="text/css" href="css/codemirror.css">
@@ -49,9 +49,7 @@
         event.preventDefault();
         ctrlPressed = false;
         // run codeblock code
-        var the_code = editor.getValue();
-        alert(the_code);
-        runit(the_code, output);
+        run();
         
     }
     // track if ctrl key was pressed
@@ -67,6 +65,11 @@
         ctrlPressed = false;
     }
     });
+    function run(){
+        var the_code = editor.getValue();
+        alert(the_code);
+        runit(the_code, output);
+    }
 
 
     var editor = CodeMirror.fromTextArea(textarea, {
