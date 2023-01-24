@@ -15,7 +15,8 @@ function builtinRead(x) {
 function runit(theCode, destination) { 
    var prog = theCode; 
    var mypre = document.getElementById(destination); 
-   mypre.innerHTML = ''; 
+   mypre.innerHTML = '';
+   alert(theCode)
    Sk.pre = destination;
    Sk.configure({
     output:outf,
