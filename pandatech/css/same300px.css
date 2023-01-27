@@ -1,0 +1,140 @@
+html, body{
+	margin:0px;
+	font-family:Comic Sans MS
+}
+
+a{
+	text-decoration:none;
+	color:white;
+}
+
+#container{
+	width:300px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#header{
+	background-color:green;
+	color:white;
+	font-size:250%;
+	margin:0px;
+	padding:10px;
+}
+
+#heading{
+	width:280px;
+	height:150px;
+}
+
+#website-name{
+	text-align:center;
+	margin:0;
+	font-weight:bold;
+	width:250px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#logo{
+	margin-left:102.5px;
+	margin-right:102.5px;
+}
+
+#slogan{
+	font-size:40%;
+	margin:0;
+	text-align:center;
+	font-weight:bold;
+	clear:both;
+}
+
+#nav{
+	margin-right:auto;
+	margin-left:auto;
+	margin-top:50px;
+	width:200px;
+	border:5px solid green;
+	text-align:center;
+
+}
+
+#nav span{
+	margin-right:40px;
+	margin-left:40px;
+	font-size:25px;
+	font-weight:bold;
+	text-align:center;
+}
+
+#nav a{
+	color:#33cc00;
+}
+
+#nav p{
+	text-align:center;
+	color:#06770a;
+	font-size:200%;
+	font-weight:bold;
+	margin:20px;
+}
+
+#name{
+	text-align:center;
+	font-size:50px;
+	color:#06770a;
+	margin-top:15px;
+}
+
+video{
+	width:280px;
+}
+
+.links{
+	color:#33cc00;
+	text-align:center;
+}
+
+.a_tag{
+	color:#06770a;
+	text-decoration:underline;
+}
+
+#footer{
+	background-color:green;
+	text-align:right;
+	height:30px;
+	padding:8px;
+	clear:both;
+	width:300px;
+}
+
+#footer p{
+	margin:0;
+	font-size:105%;
+	color:white;
+}
+
+
+
+
+html, body{
+	height:100%;
+}
+
+#container{
+	min-height:100%;
+}
+
+.main{
+	overflow:auto;
+	padding-bottom:100px;
+}
+
+#footer{
+	position:relative;
+	margin-top:-50px;
+	clear:both;
+	margin-left:auto;
+	margin-right:auto;	
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Shopping">
+		<meta name="keywords" content="HTML,CSS,JavaScript">
+		<meta name="author" content="Daniel Tomov">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Panda BG Home</title>
+		<link rel="stylesheet" type="text/css" media="screen and (max-width:900px)" href="css/Tomov_Daniel2900px.css">
+		<link rel="stylesheet" type="text/css" media="screen and (min-width:900px)" href="css/Tomov_Daniel2.css">
+		<script>
+			<!-->
+				var image1=new Image()
+					image1.src="images/header.png"
+				var image2=new Image()
+					image2.src="images/header2.png"
+			//-->
+		</script>
+	</head>
+	
+	<body>
+		<div id="container">
+			<div id="header">
+				<div id="heading">
+					<img id="image" src="images/logo.png" alt="logo"/>
+					<h1 id="heading-words">Panda BG.</h1>
+						<h6 id="underneath">We bring home to you!</h6>
+				</div>
+			</div>
+			<div id="content">
+				<img src="images/header.png" id="slide" alt="Slideshow"/>	
+				<script>
+					<!-->
+						var step=1
+						function slideit(){
+						document.images.slide.src=eval("image"+step+".src")
+						if(step<2)
+						step++
+						else
+						step=1
+						setTimeout("slideit()",5000)
+						}
+						slideit()
+					//-->
+				</script>
+				<h1 id="name">Home</h1>
+				<nav id="nav">
+					<h2> Navigation</h2>
+						<ul>
+							<li><a id="selected" >Panda BG.</a></li>
+							<li><a class="links" href="html/products.html">Products</a></li>
+							<li><a class="links" href="html/shipping.html">Shipping Info</a></li>
+							<li><a class="links" href="html/contact_us.html">Contact Us</a></li>
+							<li><a class="links" href="html/privacy_policy.html">Privacy Policy</a></li>
+						</ul>
+				</nav>
+				
+				<article id="main">
+					<p>Here at Panda BG., we bring you the taste and feeling of Bulgaria right to your front door. Whether the things you want are Red Rose perfumes, Bulgarian foods, or clothes to do traditional dances, we have it all. Shop online now and enjoy!</p>
+				</article>
+			</div>
+			<div id="footer">
+				Copyright &copy; Panda BG.
+			</div>
+		</div>
+	</body>
+</html>
