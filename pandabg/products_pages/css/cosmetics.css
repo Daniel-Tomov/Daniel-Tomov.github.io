@@ -21,7 +21,7 @@ h2{
 }
 
 #container {
-	width:500px;
+	width:900px;
 	margin-left:auto;
 	margin-right:auto;
 	text-decoration:none;
@@ -41,19 +41,15 @@ h2{
 
 #image{
 	float:right;
-	width:200px;
+	height:90px;
 	margin-top:auto;
 	margin-bottom:auto;
 }
 
 #heading{
-	width:475px;
-	height:100px; 
-}
-
-#link-back{
-	text-decoration:none; 
-	color:white
+	width:600px;
+	height:100px;
+	float:right;
 }
 
 #heading-words{
@@ -63,9 +59,12 @@ h2{
 	color:white;
 	float:left;
 }
+
 #underneath{
 	margin:0px;
 	width:250px;
+	text-decoration:none;
+	color:white;
 }
 
 #content {
@@ -73,11 +72,6 @@ h2{
 	color:blue;
 	font-size: 20px;
 	text-align:center;
-}
-
-#slide{
-	 width:480px;
-	 height:150px; 
 }
 
 #nav {
@@ -88,48 +82,85 @@ h2{
 	text-align:left;
 }
 
+#nav .products{
+	text-decoration:none;
+	color:blue;
+	font-size:20px;
+}
+
+.nav1{
+	padding-left:10px;
+	color:blue;
+}
+
 #selected{
 	text-decoration:none; 
 	color:red; 
 	font-weight:bold;
 }
 
+#selected1{
+	text-decoration:none; 
+	color:green; 
+	font-weight:bold;
+	padding-left:10px;
+	margin:0px;
+}
+
 .links{
 	text-decoration:none; 
-	color:blue
+	color:blue;
 }
 
 #main {
 	float:right;
-	width:250px;
+	width:702px;
 	text-align:left;
 	margin-top:30px;
 	margin-left:10px;
-	height:500px;
+	height:720px;
 	text-decoration:none;
 	font-size:27px;
 	font-weight:bold;
 	margin-bottom:1px;
 }
 
-#categories-left{
-	float:left;
-	width:250px;
-	height:350px;
-	margin:0px;
+.product-boxes{
+	height:310px; 
+	margin-left:auto;
+	width:650px; 
+	margin-bottom:30px;
 }
 
-#categories-right{
-	float:left;
-	width:250px;
+.category-left{
+	width:200px;
 	height:350px;
-	margin:0px;
-}
-
-#tags{
-	margin:0px; 
-	text-decoration:none;
 	text-align:center;
+	margin-left:10px;
+	margin-right:10px;
+	float:left;
+}
+
+.category-center{
+	width:200px; 
+	height:350px;
+	text-align:center;
+	float:right;
+	margin-left:30px;
+	margin-right:30px;
+}
+
+.category-right{
+	width:200px; 
+	height:350px;
+	text-align:center;
+	float:right;
+	margin-left:10px;
+	margin-right:10px;
+}
+
+.words{
+	margin:0px;
 }
 
 #footer {

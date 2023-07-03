@@ -5,7 +5,8 @@ body{
 }
 
 a{
-	text-decoration:none;
+	text-decoration:underline;
+	color:blue;
 }
 
 ul{
@@ -21,7 +22,7 @@ h2{
 }
 
 #container {
-	width:500px;
+	width:900px;
 	margin-left:auto;
 	margin-right:auto;
 	text-decoration:none;
@@ -41,19 +42,15 @@ h2{
 
 #image{
 	float:right;
-	width:200px;
+	height:90px;
 	margin-top:auto;
 	margin-bottom:auto;
 }
 
 #heading{
-	width:475px;
-	height:100px; 
-}
-
-#link-back{
-	text-decoration:none; 
-	color:white
+	width:600px;
+	height:100px;
+	float:right;
 }
 
 #heading-words{
@@ -63,9 +60,11 @@ h2{
 	color:white;
 	float:left;
 }
+
 #underneath{
 	margin:0px;
 	width:250px;
+	color:white;
 }
 
 #content {
@@ -73,11 +72,6 @@ h2{
 	color:blue;
 	font-size: 20px;
 	text-align:center;
-}
-
-#slide{
-	 width:480px;
-	 height:150px; 
 }
 
 #nav {
@@ -101,35 +95,20 @@ h2{
 
 #main {
 	float:right;
-	width:250px;
+	width:702px;
 	text-align:left;
 	margin-top:30px;
 	margin-left:10px;
-	height:500px;
+	height:375px;
 	text-decoration:none;
 	font-size:27px;
 	font-weight:bold;
 	margin-bottom:1px;
-}
-
-#categories-left{
-	float:left;
-	width:250px;
-	height:350px;
-	margin:0px;
-}
-
-#categories-right{
-	float:left;
-	width:250px;
-	height:350px;
-	margin:0px;
-}
-
-#tags{
-	margin:0px; 
-	text-decoration:none;
 	text-align:center;
+}
+
+#map{
+	margin-bottom:20px;
 }
 
 #footer {
