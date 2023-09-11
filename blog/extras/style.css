@@ -21,7 +21,7 @@ h1{
 .even-space {margin: 0 auto;}
 .white {color: white;}
 .black {color:black;}
-
+.link{color: blue;text-decoration: underline;}
 
 /***** BEGIN HEADER *******/
 
