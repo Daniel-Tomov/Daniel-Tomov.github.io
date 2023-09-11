@@ -38,6 +38,9 @@
             <li>
               <button onclick="myFunction()">Submit</button>
             </li>
+            <li>
+              <h2 id="result"></h2>
+            </li>
           </ul>
         </div>
       </div>
@@ -74,9 +77,15 @@ Content-Disposition: form-data; name="your-message"
 
 ` + document.getElementById("message").value + ``,
         success: function (result) {
+          document.getElementById("result").innerText = "Success!";
+          document.getElementById("name").value = "";
+          document.getElementById("email").value = "";
+          document.getElementById("subject").value = "";
+          document.getElementById("message").value = "";
           console.log(result);
         },
         error: function (result, status) {
+          document.getElementById("result").innerText = "Error, please try again";
           console.log(result);
         }
       });
