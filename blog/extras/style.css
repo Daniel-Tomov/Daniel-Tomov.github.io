@@ -1,0 +1,117 @@
+* {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  list-style-type: none;
+}
+
+html {
+  background-color: #d4d4d4;
+}
+
+h1{
+  font-family: bungee, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 60px;
+}
+
+.text-center {text-align: center;}
+.even-space {margin: 0 auto;}
+.white {color: white;}
+.black {color:black;}
+
+
+/***** BEGIN HEADER *******/
+
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 75px;
+  background-color: rgba(36,38,41,0.6);
+}
+
+#title{
+  float:left;
+  font-family: bungee, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 75px;
+  margin: 0 0 0 50px;
+}
+
+#nav {
+  height: inherit;
+  float:right;
+  margin: 0 20px 0 0;
+}
+
+#nav > ul {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+#nav > ul > li {
+  float: left;
+  padding: 26px 30px;
+  font-size: 20px;
+  position:initial;
+  color: white;
+}
+
+#nav-ctf-submenu, #nav-career-submenu {
+  margin: 0;
+  width: min-content;
+  height: min-content;
+}
+
+#nav-ctf:hover #nav-ctf-submenu, #nav-ctf-submenu:hover #nav-ctf-submenu, #nav-career:hover #nav-career-submenu, #nav-career-submenu:hover #nav-career-submenu{
+  margin: 26px 0 0 0;
+  width: auto;
+  height:30px;
+  transition: ease-in-out 500ms;
+  position:absolute;
+  z-index: 100;
+}
+
+#nav-ctf-submenu > li, #nav-career-submenu > li {
+  padding: 0 10px;
+  background-color: rgba(36,38,41,0.7);
+  font-size: 0px;
+  color:white;
+}
+
+#nav-ctf:hover #nav-ctf-submenu > li, #nav-ctf-submenu:hover #nav-ctf-submenu > li, #nav-career:hover #nav-career-submenu > li, #nav-career-submenu:hover #nav-career-submenu > li{
+  width: auto;
+  height:30px;
+  font-size: 20px;
+  transition: ease-in-out 300ms;
+}
+
+#nav-ctf:hover #nav-ctf-submenu > li:first-child, #nav-career:hover #nav-career-submenu > li:first-child{
+  padding-top: 10px;
+}
+
+#nav-ctf-submenu > li:last-child, #nav-career-submenu > li:last-child{
+  border-radius: 0 0 10px 10px;
+}
+
+/***** END HEADER *******/
+
+
+/***** BEGIN FOOTER *******/
+
+#footer {
+  clear: both;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+.divider {
+  width: 100%;
+  height: 75px;
+}

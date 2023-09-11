@@ -1,0 +1,64 @@
+#main {
+  background-image: url("index-background.jpg");
+  background-repeat: no-repeat;
+  background-attachment:fixed; 
+  background-size: 105%;
+  width: 100%;
+  height: fit-content;
+  padding: 0 0 20px 0;
+}
+
+#index-title {
+  margin: 100px 0 0 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 75px;
+  box-sizing: border-box;
+  width: 90%;
+}
+
+.grid-box {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.blog-post {
+  margin: 0 auto;
+  background-color: #fafafa;
+  width: 400px;
+  padding: 10px 10px 20px 10px;
+  box-shadow: 13px 12px 10px rgba(0, 0, 0, 0.5);
+}
+
+.blog-post > a {
+  width: inherit;
+  height: 100%;
+}
+
+.blog-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 400px;
+  max-height: 300px;
+}
+
+.blog-title {
+  /*text-align: center;*/
+  font-size:40px;
+  font-family: source-serif-pro, serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.blog-description {
+  
+  font-size:20px;
+  font-family: sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-indent:10px;
+  margin: 10px 0 0 0;
+}
