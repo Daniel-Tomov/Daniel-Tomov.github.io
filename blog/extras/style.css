@@ -62,13 +62,13 @@ h1{
   color: white;
 }
 
-#nav-ctf-submenu, #nav-career-submenu {
+#nav-ctf-submenu, #nav-career-submenu, #nav-guide-submenu {
   margin: 0;
   width: min-content;
   height: min-content;
 }
 
-#nav-ctf:hover #nav-ctf-submenu, #nav-ctf-submenu:hover #nav-ctf-submenu, #nav-career:hover #nav-career-submenu, #nav-career-submenu:hover #nav-career-submenu{
+#nav-ctf:hover #nav-ctf-submenu, #nav-ctf-submenu:hover #nav-ctf-submenu, #nav-career:hover #nav-career-submenu, #nav-career-submenu:hover #nav-career-submenu, #nav-guide:hover #nav-guide-submenu, #nav-guide-submenu:hover #nav-guide-submenu{
   margin: 26px 0 0 0;
   width: auto;
   height:30px;
@@ -77,25 +77,25 @@ h1{
   z-index: 100;
 }
 
-#nav-ctf-submenu > li, #nav-career-submenu > li {
+#nav-ctf-submenu > li, #nav-career-submenu > li, #nav-guide-submenu > li {
   padding: 0 10px;
   background-color: rgba(36,38,41,0.7);
   font-size: 0px;
   color:white;
 }
 
-#nav-ctf:hover #nav-ctf-submenu > li, #nav-ctf-submenu:hover #nav-ctf-submenu > li, #nav-career:hover #nav-career-submenu > li, #nav-career-submenu:hover #nav-career-submenu > li{
+#nav-ctf:hover #nav-ctf-submenu > li, #nav-ctf-submenu:hover #nav-ctf-submenu > li, #nav-career:hover #nav-career-submenu > li, #nav-career-submenu:hover #nav-career-submenu > li, #nav-guide:hover #nav-guide-submenu > li, #nav-guide-submenu:hover #nav-guide-submenu > li{
   width: auto;
   height:30px;
   font-size: 20px;
   transition: ease-in-out 300ms;
 }
 
-#nav-ctf:hover #nav-ctf-submenu > li:first-child, #nav-career:hover #nav-career-submenu > li:first-child{
+#nav-ctf:hover #nav-ctf-submenu > li:first-child, #nav-career:hover #nav-career-submenu > li:first-child, #nav-guide:hover #nav-guide-submenu > li:first-child{
   padding-top: 10px;
 }
 
-#nav-ctf-submenu > li:last-child, #nav-career-submenu > li:last-child{
+#nav-ctf-submenu > li:last-child, #nav-career-submenu > li:last-child, #nav-guide-submenu > li:last-child{
   border-radius: 0 0 10px 10px;
 }
 
