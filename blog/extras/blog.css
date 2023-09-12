@@ -17,6 +17,10 @@ h2 {
   background-color: #fafafa;
 }
 
+#main-content > h2 {
+  font-size: 40px;
+}
+
 #main-content > img {
   margin: 0 0 20px 0;
   width: 100%;
@@ -24,10 +28,16 @@ h2 {
 }
 
 .main-text {
-  font-size:17px;
+  font-size:22px;
   font-family: sans-serif;
-  font-weight: 500;
+  font-weight: 100;
   font-style: normal;
-  margin: 10px 0 10px 0;
+  margin: 20px 0 20px 0;
   clear: both;
+}
+
+#main-content > ol > li {
+  list-style-type:decimal;
+  font-size: 22px;
+  margin: 0 0 10px 4%;
 }
