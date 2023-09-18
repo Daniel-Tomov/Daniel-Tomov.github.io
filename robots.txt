@@ -1,0 +1,24 @@
+User-agent: *
+Disallow: /*.pdf$
+Disallow: /*.PDF$
+
+Disallow: /*.docx$
+Disallow: /*.DOCX$
+
+
+Disallow: /*.png$
+Disallow: /*.PNG$
+
+Disallow: /*.jpg$
+Disallow: /*.JPG$
+
+Disallow: /*.jpeg$
+Disallow: /*.JPEG$
+
+
+Disallow: /*.css$
+Disallow: /*.js$
+Disallow: /*.xml$
+
+
+Sitemap: https://danieltomov.me/sitemap.html
