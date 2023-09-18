@@ -22,7 +22,7 @@ h2 {
 }
 
 #main-content > img {
-  margin: 0 0 20px 0;
+  margin: 0 auto 20px auto;
   width: 100%;
   display: block;
 }
@@ -40,4 +40,15 @@ h2 {
   list-style-type:decimal;
   font-size: 22px;
   margin: 0 0 10px 4%;
+}
+
+.caption {
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  margin: 20px 0 20px 0;
+  clear: both;
+  display: block;
+  text-align: center;
 }
