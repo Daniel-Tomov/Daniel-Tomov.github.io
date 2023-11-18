@@ -21,4 +21,4 @@ Disallow: /*.js$
 Disallow: /*.xml$
 
 
-Sitemap: https://danieltomov.me/sitemap.html
+Sitemap: https://danieltomov.me/sitemap.xml
