@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html style=""><!--
+     Fall 2014
+     CSCI 320 - Computer Architecture
+     Main webpage of the MIPS Conversion
+     Bucknell University 2014. GNU General Public Licensing.
+	  Developed for CSCI 206 & 320 by Tiago Bozzetti, Ellie Easse & Chau Tieu.
+    --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>window["GUARDIO_SENSOR_CONF"] = {"click":true}</script>
+    
+    <link rel="stylesheet" href="./MIPS Converter_files/styles.css">
+      <script src="./MIPS Converter_files/instructioninfo.js.download"></script>
+      <script src="./MIPS Converter_files/helper.js.download"></script>
+      <script src="./MIPS Converter_files/mipstohex.js.download"></script>
+      <script src="./MIPS Converter_files/hextomips.js.download"></script>
+      <title>MIPS Converter</title>
+  </head>
+
+  <body>
+    	<!-- Navigation icons -->
+      <div id="nav">
+			<a href="https://www.eg.bucknell.edu/~csci320/mips_web/index.html"><img src="./MIPS Converter_files/home.png" width="50px"></a> <br>
+			<a href="https://www.eg.bucknell.edu/~csci320/mips_web/help.html"><img src="./MIPS Converter_files/help.png" width="50px"></a>
+	   </div>
+	   <div id="wrapper">
+	      <br><br><br>
+	      
+	      <header>
+				MIPS Converter
+	      </header>
+
+	      <div id="body">
+	      
+	      	<!-- Instruction to hex section -->
+				<section class="itoh">
+			 		<h2 id="box_header">Instruction ⇒ Hex</h2>
+			 		<input type="text" id="instruction" placeholder="Instruction" class="input-list style-1 clearfix">
+				  <p id="description">ex. add t1 t2 t3, addi t1 t2 0xffff, j 0x02fffff</p>
+				  <input type="submit" id="convert" value="Convert" onclick="mipstohex()">   
+				</section>
+				
+				<!-- Hex to instruction section -->
+				<section class="htoi">
+			 		<h2 id="box_header">Hex ⇒ Instruction</h2>
+			 		<input type="text" id="hex" placeholder="Hex" class="input-list style-1 clearfix">
+				  <p id="description">ex. 0x014B4820</p>
+				  <input type="submit" id="convert" value="Convert" onclick="binaryToMips()"> 
+				</section>
+				
+				<!-- Result section -->
+				<section class="result">
+				  	<h2 id="result_title">Result</h2>
+				  	<div id="format">
+						<p id="error_message"></p>
+			 		   <p id="hex_result"><h1>ADDI $s2 $t2 0xFFF9</h1><h3>Binary: 00100001010100101111111111111001</h3><h3>Hex: 0x2152FFF9</h3><hr><p></p><table style="border-collapse: collapse;"><tbody><tr class="toprow"><td style="text-align: left;">31</td><td style="text-align: right;">26</td><td style="text-align: left;">25</td><td style="text-align: right;">21</td><td style="text-align: left;">20</td><td style="text-align: right;">16</td><td style="text-align: left;">15</td><td style="text-align: right;">0</td></tr><tr><td colspan="2" style="text-align: center; border-right: 1px solid black; border-left: 1px solid black;">ADDI</td><td colspan="2" style="text-align: center; border-right: 1px solid black; border-left: 1px solid black;">$t2</td><td colspan="2" style="text-align: center; border-right: 1px solid black; border-left: 1px solid black;">$s2</td><td colspan="2" style="text-align: center; border-right: 1px solid black; border-left: 1px solid black;">immediate</td></tr><tr><td colspan="2" style="text-align: center; border-right: 1px solid black; border-left: 1px solid black;">001000</td><td colspan="2" style="text-align: center; border-right: 1px solid black; border-left: 1px solid black;">01010</td><td colspan="2" style="text-align: center; border-right: 1px solid black; border-left: 1px solid black;">10010</td><td colspan="2" style="text-align: center; border-right: 1px solid black; border-left: 1px solid black;">1111111111111001</td></tr><tr class="bottomrow"><td colspan="2" style="text-align: center;">6</td><td colspan="2" style="text-align: center;">5</td><td colspan="2" style="text-align: center;">5</td><td colspan="2" style="text-align: center;">16</td></tr></tbody></table><p></p></p>
+					 	<p id="instruction_format"></p>
+				  </div>
+				  <div id="info">
+					 	<p id="instruction_info"><h1>ADDI</h1><h3>Add Immediate Word</h3><hr><p style="float:right;"><b>MIPS Architecture Extension: MIPS I</b></p><p><b>Format:</b><br>ADDI rt, rs, immediate [I-type]</p><p></p><table style="border-collapse: collapse;"><tbody><tr class="toprow"><td style="text-align: left;">31</td><td style="text-align: right;">26</td><td style="text-align: left;">25</td><td style="text-align: right;">21</td><td style="text-align: left;">20</td><td style="text-align: right;">16</td><td style="text-align: left;">15</td><td style="text-align: right;">0</td></tr><tr><td colspan="2" style="text-align: center; border-right: 1px solid black; border-left: 1px solid black;">ADDI</td><td colspan="2" style="text-align: center; border-right: 1px solid black; border-left: 1px solid black;">rs</td><td colspan="2" style="text-align: center; border-right: 1px solid black; border-left: 1px solid black;">rt</td><td colspan="2" style="text-align: center; border-right: 1px solid black; border-left: 1px solid black;">immediate</td></tr><tr><td colspan="2" style="text-align: center; border-right: 1px solid black; border-left: 1px solid black;">001000</td><td colspan="2" style="text-align: center; border-right: 1px solid black; border-left: 1px solid black;"></td><td colspan="2" style="text-align: center; border-right: 1px solid black; border-left: 1px solid black;"></td><td colspan="2" style="text-align: center; border-right: 1px solid black; border-left: 1px solid black;"></td></tr><tr class="bottomrow"><td colspan="2" style="text-align: center;">6</td><td colspan="2" style="text-align: center;">5</td><td colspan="2" style="text-align: center;">5</td><td colspan="2" style="text-align: center;">16</td></tr></tbody></table><p></p><p><b>Purpose:</b><br>To add a constant to a 32-bit integer. If overflow occurs, then trap.</p><p><b>Description:</b><br>rt &lt;- rs + immediate<br>The 16-bit signed immediate is added to the 32-bit value in GPR rs to produce a 32-bit result. If the addition results in 32-bit 2's complement arithmetic overflow then the destination register is not modified and an Integer Overflow exception occurs. If it does not overflow, the 32-bit result is placed into GPR rt.</p><p><b>Restrictions:</b><br>On 64-bit processors, if GPR rs does not contain a sign-extended 32-bit value (bits 63..31 equal), then the result of the operation is undefined.</p><p><b>Operation:</b><br>if (NotWordValue(GPR[rs])) then UndefinedResult() endif<br>temp &lt;- GPR[rs] + sign_extend(immediate)<br>if (32_bit_arithmetic_overflow) then<br> SignalException(IntegerOverflow)<br>else<br> GPR[rt] &lt;- sign_extend(temp31..0)<br>endif</p><p><b>Exceptions:</b><br>Integer Overflow</p><p><b>Programming Notes:</b><br>ADDIU performs the same arithmetic operation but, does not trap on overflow.</p><p><b>Implementation Notes:</b><br></p></p>
+				  </div>
+				</section>
+	    	</div> 
+	    </div>
+
+	    <footer>
+	      © Bucknell University 2014. GNU General Public Licensing.<br>
+	      Developed for CSCI 320 - Computer Architecture by Tiago Bozzetti, Ellie Easse &amp; Chau Tieu.<br><br>
+		
+		  <a href="https://www.linkedin.com/pub/eleanor-easse/64/932/618" target="_blank">Ellie Easse</a>
+		    <a href="https://www.linkedin.com/in/chautieu" target="_blank">Chau Tieu</a>
+		</footer>
+	
+
+</body></html>
