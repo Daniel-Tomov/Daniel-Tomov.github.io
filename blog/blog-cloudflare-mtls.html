@@ -25,28 +25,28 @@
         <h2>How to enable mTLS in Cloudflare</h2>
         <p class="main-text">Before I start, a Cloudflare account setup with a domain name is required to follow this tutorial. There are many guides online which explain how to do that. Note: This may not work with domains from <a href="https://freenom.com">freenom.com</a> because Cloudflare may not work with those domains.</p>
         <ol>
-          <li>Open the dashboard for the domain in which you are configuring mTLS.</li>
-          <li>Click on the <strong>SSL/TLS</strong> dropdown, then <strong>Client Certificates</strong>.</li>
-          <li>Click on <strong>Create Certificate</strong>.</li>
+          <li class="main-text">Open the dashboard for the domain in which you are configuring mTLS.</li>
+          <li class="main-text">Click on the <strong>SSL/TLS</strong> dropdown, then <strong>Client Certificates</strong>.</li>
+          <li class="main-text">Click on <strong>Create Certificate</strong>.</li>
           <img class="even-space" style="display: block; width: 100%; height: 500px; object-position: 50% 10%; object-fit: cover;" src="media/cloudflare_mtls/certificate_screenshot.JPG"/>
-          <li>Create a certificate with your desired settings. The default settings work as well.
+          <li class="main-text">Create a certificate with your desired settings. The default settings work as well.
             Once you have your public and private keys, copy them into a private.key and certificate.pem files respectively.</li>
-          <li>Download the Cloudflare certificate by going to this link: <a class="link" href="https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/user-side-certificates/install-cloudflare-cert">developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/user-side-certificates/install-cloudflare-cert</a>. Download the .pem certificate.</li>
-          <li>Open a Linux virtual machine (a container works as well) and upload the three keys to it. If you doing this natively on Linux, good job! If you are on Windows, <a href="https://learn.microsoft.com/en-us/windows/wsl/install">WSL (Windows Subsystem for Linux)</a>, <a href="https://www.docker.com/">Docker</a>, or a hypervisor like <a href="https://www.virtualbox.org/">VirtualBox</a> can help you with getting a virtual machine or container running.</li>
-          <li>
+          <li class="main-text">Download the Cloudflare certificate by going to this link: <a class="link" href="https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/user-side-certificates/install-cloudflare-cert">developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/user-side-certificates/install-cloudflare-cert</a>. Download the .pem certificate.</li>
+          <li class="main-text">Open a Linux virtual machine (a container works as well) and upload the three keys to it. If you doing this natively on Linux, good job! If you are on Windows, <a href="https://learn.microsoft.com/en-us/windows/wsl/install">WSL (Windows Subsystem for Linux)</a>, <a href="https://www.docker.com/">Docker</a>, or a hypervisor like <a href="https://www.virtualbox.org/">VirtualBox</a> can help you with getting a virtual machine or container running.</li>
+          <li class="main-text">
             Open the terminal, and run this command to update your packages and download <a href="https://www.openssl.org/">openssl</a>:
             <code>sudo apt update && sudo apt install openssl -y</code>
           </li>
-          <li>
+          <li class="main-text">
             Once it is done, enter this command to generate the pfx certificate which you will upload to any device:
             <code>openssl pkcs12 -export -out &lt;path to output file&gt;.pfx -inkey &lt;path to private key&gt;.key -in &lt;path to public key&gt;.pem  -certfile &lt;path to cloudflare certificate&gt;.pem</code>
           </li>
-          <li>Now that you have the .pfx file, you can upload it to any device. On Windows, it is as easy as double-clicking the file and it will install for you. On iOS, you will need to Airdrop it from another device or run a web server on your Linux machine and download it. Either way, it will install directly into the operating system.</li>
-          <li>Using the certificate is as easy as navigating to the website where mTLS is configured. You will have to manually select the certificate if you are on Windows, but Safari on iOS automatically selects the certificate. <i>Note: Certificates only work in Safari in iOS.</i></li>
-          <li>Back to the Cloudflare dashboard. Click on Edit and enter the hosts for which you wish to enable mTLS. Then click save.</li>
-          <li>Click on Create mTLS Rule. This will bring you to the page where you can create a rule in your WAF. If you want to make one from scratch, the default is <code>(not cf.tls_client_auth.cert_verified and http.request.uri.path in {"&lt;list of host names&gt;"})</code>. However, I have configured my WAF to allow requests which match any of my private domains and have a certificate skip the rest of the firewall rules and security checks. My rule looks like this: <code>(http.host in {"&lt;list of host names&gt;""} and cf.tls_client_auth.cert_verified)</code></li>
-          <li>It may take time for your certificate to be registered in Cloudflare or for your device to recognize it. In my experience, it worked after 24 hours.</li>
-          <li>Congratulations! You have configured mTLS using Cloudflare on your domain. You are one step closer to being more secure.</li>
+          <li class="main-text">Now that you have the .pfx file, you can upload it to any device. On Windows, it is as easy as double-clicking the file and it will install for you. On iOS, you will need to Airdrop it from another device or run a web server on your Linux machine and download it. Either way, it will install directly into the operating system.</li>
+          <li class="main-text">Using the certificate is as easy as navigating to the website where mTLS is configured. You will have to manually select the certificate if you are on Windows, but Safari on iOS automatically selects the certificate. <i>Note: Certificates only work in Safari in iOS.</i></li>
+          <li class="main-text">Back to the Cloudflare dashboard. Click on Edit and enter the hosts for which you wish to enable mTLS. Then click save.</li>
+          <li class="main-text">Click on Create mTLS Rule. This will bring you to the page where you can create a rule in your WAF. If you want to make one from scratch, the default is <code>(not cf.tls_client_auth.cert_verified and http.request.uri.path in {"&lt;list of host names&gt;"})</code>. However, I have configured my WAF to allow requests which match any of my private domains and have a certificate skip the rest of the firewall rules and security checks. My rule looks like this: <code>(http.host in {"&lt;list of host names&gt;""} and cf.tls_client_auth.cert_verified)</code></li>
+          <li class="main-text">It may take time for your certificate to be registered in Cloudflare or for your device to recognize it. In my experience, it worked after 24 hours.</li>
+          <li class="main-text">Congratulations! You have configured mTLS using Cloudflare on your domain. You are one step closer to being more secure.</li>
         </ol>
         <h2>Conclusion</h2>
         <p class="main-text">Mutual Transport Layer Security (mTLS) is a robust security protocol that ensures two-way authentication between clients and servers. Cloudflare mTLS takes this concept and simplifies its implementation for organizations looking to enhance their network security. If you're considering mTLS for your organization, Cloudflare's solution is worth exploring. With its user-friendly interface and powerful features, you can enhance your network security and protect sensitive data with confidence.</p>
