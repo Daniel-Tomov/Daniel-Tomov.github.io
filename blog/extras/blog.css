@@ -21,6 +21,10 @@ h2 {
   font-size: 40px;
 }
 
+#main-content > h3 {
+  font-size: 30px;
+}
+
 #main-content > img {
   margin: 0 auto 20px auto;
   width: 100%;
