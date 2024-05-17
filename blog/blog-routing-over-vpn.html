@@ -18,6 +18,9 @@
       <h1 class="text-center black">Routing Non-VPN Client Traffic over VPN</h1>
       <div id="main-content" class="even-space">
         <p class="main-text">Have you ever wanted to route a device's traffic over a VPN but could not install a VPN client on that device? Let us call this "Device A." It is possible to route Device A's traffic to a computer (Device B) where the VPN client is installed. Device B will send traffic from Device A to the VPN server, and receive traffic from the VPN server to Device A</p>
+        <p class="main-text">Essentially, this will be the end result:</p>
+        <img style="width: 80%" src="media/routing_vpn/diagram.png"/>
+        <p class="caption">Final diagram of the network.</p>
         <h2>Preparing a Proxmox Container to be the VPN Server</h2>
         <p class="main-text">By default, Proxmox Containers can not be a VPN Server or Client because they do not have <code>tun</code> adapters. As a result, they need to use the Proxmox host's <code>tun</code> adapter. After creating the OpenVPN container using the Proxmox GUI, I followed <a class="link" href="https://pve.proxmox.com/wiki/OpenVPN_in_LXC">this guide from Proxmox</a> on how to configure an OpenVPN server in Proxmox. Specifically, I copied the following code into <code>/etc/pve/lxc/123.conf</code>:<br>
         <code>lxc.cgroup2.devices.allow: c 10:200 rwm</code><br>
