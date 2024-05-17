@@ -17,9 +17,9 @@
       <div class="divider"></div>
       <h1 class="text-center black">Routing Non-VPN Client Traffic over VPN</h1>
       <div id="main-content" class="even-space">
-        <p class="main-text">Have you ever wanted to route a device's traffic over a VPN but could not install a VPN client on that device? Lets call this "Device A." It is possible to route Device A's traffic to a computer (Device B) where the VPN client is installed. Device B will send traffic from Device A to the VPN server and recieve traffic from the VPN server and send it back to Device A.</p>
+        <p class="main-text">Have you ever wanted to route a device's traffic over a VPN but could not install a VPN client on that device? Let us call this "Device A." It is possible to route Device A's traffic to a computer (Device B) where the VPN client is installed. Device B will send traffic from Device A to the VPN server and receive traffic from the VPN server and send it back to Device A.</p>
         <h2>Preparing a Proxmox Container to be the VPN Server</h2>
-        <p class="main-text">By default, Proxmox Containers can not be a VPN Server or Client because they do not have <code>tun</code> adapters. As a result, they need to use the Proxmox host's <code>tun</code> adapter. After creating the OpenVPN container using the Proxmox GUI, I folowed <a class="link" href="https://pve.proxmox.com/wiki/OpenVPN_in_LXC">this guide from Proxmox</a> on how to configure an OpenVPN server in Proxmox. Specifically, I copied the following code into <code>/etc/pve/lxc/123.conf</code>:<br>
+        <p class="main-text">By default, Proxmox Containers can not be a VPN Server or Client because they do not have <code>tun</code> adapters. As a result, they need to use the Proxmox host's <code>tun</code> adapter. After creating the OpenVPN container using the Proxmox GUI, I followed <a class="link" href="https://pve.proxmox.com/wiki/OpenVPN_in_LXC">this guide from Proxmox</a> on how to configure an OpenVPN server in Proxmox. Specifically, I copied the following code into <code>/etc/pve/lxc/123.conf</code>:<br>
         <code>lxc.cgroup2.devices.allow: c 10:200 rwm</code><br>
         <code>lxc.mount.entry: /dev/net dev/net none bind,create=dir</code>
         </p>
@@ -30,7 +30,7 @@
 
 
         <h2>Configuring the VPN Server</h2>
-        <p class="main-text">I used <a class="link" href="https://github.com/Nyr/openvpn-install">Nyr's openvpn-install repository</a> to setup the VPN server. I am hosting the VPN on a Proxmox LXC container in my house.</p>
+        <p class="main-text">I used <a class="link" href="https://github.com/Nyr/openvpn-install">Nyr's openvpn-install repository</a> to set up the VPN server. I am hosting the VPN on a Proxmox LXC container in my house.</p>
         <img src="media/routing_vpn/vpn_download.jpg"/>
         <p class="caption">The commands I ran to download the GitHub repository with the OpenVPN install script.</p>
         <img src="media/routing_vpn/vpn_install.jpg"/>
@@ -41,8 +41,8 @@
         <h2>Configuring the VPN client</h2>
         <p class="main-text">Transfer the output VPN configuration to a second (Linux) computer (I used SCP). Install OpenVPN on it by running <code>sudo apt update && sudo apt install openvpn</code> and accept the packages to be installed.</p>
         <p class="main-text">The first thing you need to do is enable IP forwarding on the Linux system. Do so by editing the system configuration file with <code>nano /etc/sysctl.conf</code>. Find the line containing <code>net.ipv4.ip_forward</code> and set it to <code>1</code>. Finally, run <code>sysctl -p</code> to reload the configuration.</p>
-        <p class="main-text">After that, you need to make rules in the computer's routing table to route traffic over the VPN. I used <code>iptables</code> to pass traffic from a subnet of IPs over the VPN with the command (as sudo) <code>iptables -t nat -A POSTROUTING -s 192.168.1.240/28 -o tun0 -j MASQUERADE</code>.</p>
-        <p class="main-text">Finally, go to the computer which you want to route it's traffic over the VPN. Give it an ip address in the range you defined (192.168.1.240/28 for me) and the default gateway to the IP address of the client computer.</p>
+        <p class="main-text">After that, you need to make rules in the computer's routing table to route traffic over the VPN. I used <code>iptables</code> to pass traffic from a subnet of IPs over the VPN with the command (as sudo) <code>iptables -t nat -A POSTROUTING -s 192.168.1.240/28 -o tun0 -j MASQUERADE</code>. You also need to install <code>iptables-persistent</code> to save the iptables configuration. Alternatively, you can run <code>iptables-save > /etc/iptables/rules.v4</code>. Both commands will save the current configuration of iptables.</p>
+        <p class="main-text">Finally, go to the computer where you want to route its traffic over the VPN. Give it an IP address in the range you defined (192.168.1.240/28 for me) and the default gateway to the IP address of the client computer.</p>
         <img style="width: 40%;" src="media/routing_vpn/ip_configuration.png"/>
         <p class="caption">IP configuration to route traffic over the VPN</p>
         <h2>End Result</h2>
