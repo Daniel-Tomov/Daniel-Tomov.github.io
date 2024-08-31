@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Twister</title>
+        <style>
+            .colors, .limbs {
+                width: 200px;
+                height: 100px;
+                font-size: 300%;
+            }
+
+            button {
+                font-size: 250%;
+            }
+
+            #result{
+                font-size: 50px;
+            }
+        </style>
+        <script>
+            function random(max) {
+                return Math.floor(Math.random() * max);
+            }
+
+            function spin(){
+                let colors = document.getElementsByClassName("colors");
+                let limbs = document.getElementsByClassName("limbs");
+                
+                let color = colors[random(colors.length)];
+                let limb = limbs[random(limbs.length)];
+
+                document.getElementById("result").innerText = limb.value + " " + color.value; 
+            }
+            function addColor(){
+                let colorsDiv = document.getElementById("colors");
+                let newTextBox = document.createElement("textarea");
+                newTextBox.className = "colors";
+                colorsDiv.appendChild(newTextBox);
+
+                let temp = colorsDiv.children[colorsDiv.childElementCount - 2];
+                colorsDiv.removeChild(temp);
+                colorsDiv.appendChild(temp);
+            }
+            function addLimb(){
+                let limbsDiv = document.getElementById("limbs");
+                let newTextBox = document.createElement("textarea");
+                newTextBox.className = "limbs";
+                limbsDiv.appendChild(newTextBox);
+
+                let temp = limbsDiv.children[limbsDiv.childElementCount - 2];
+                limbsDiv.removeChild(temp);
+                limbsDiv.appendChild(temp);
+            }
+        </script>
+    </head>
+    <body>
+        <div id="colors">
+            <textarea name="" id="" class="colors">Blue</textarea>
+            <textarea name="" id="" class="colors">Red</textarea>
+            <textarea name="" id="" class="colors">Yellow</textarea>
+            <textarea name="" id="" class="colors">Green</textarea>
+            <button style="width:100px; height: 100px;" onclick="addColor()">Add color</button>
+        </div>
+        <div id="limbs">
+            <textarea name="" id="" class="limbs">Right Hand</textarea>
+            <textarea name="" id="" class="limbs">Right Foot</textarea>
+            <textarea name="" id="" class="limbs">Left Hand</textarea>
+            <textarea name="" id="" class="limbs">Left Foot</textarea>
+            <button style="width:100px; height: 100px;" onclick="addLimb()">Add Limb</button>
+        </div>
+        <button style="width:100px; height: 100px;" onclick="spin()">Spin</button>
+        <p id="result">Result will appear here</p>
+    </body>
+</html>
