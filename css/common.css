@@ -1,0 +1,247 @@
+:root{
+    --black: #000;
+    --white: #fff;
+    --blue: #0000EE;
+    --gray: #f0f0f0;
+    --dark-gray: #383838;
+    --button-dimensions: 75px;
+}
+
+
+#entry{
+    width: 100%;
+    height: 600px;
+    background-image: url(/images/main.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: var(--black);
+}
+
+#entry img{
+    height: 600px;
+    margin: 0 auto;
+    display: block;
+}
+
+main{
+    height: fit-content;
+    margin: 25px auto 0 auto;
+}
+
+#intro{
+    height: fit-content;
+    margin: 0 auto;
+}
+
+#left{
+    float:left;
+    width: 60%;
+    font-family: source-serif-pro, serif;
+    font-weight: 400;
+    font-style: normal;
+} #left p {font-size: 18px;}
+
+#right{
+    float:right;
+    width: 30%;
+}
+
+#email-big{
+    display:block;
+}
+#email-small{
+    display:none;
+}
+
+.section{
+    padding: 2% 15%;
+}
+
+.item{ 
+    height: fit-content;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.item-img{
+    /*border:#0000EE;*/
+    height: 200px;
+    margin: 0 auto 20px auto;
+    display: block;
+}
+
+footer{
+    position: relative;
+    clear: both;
+    padding: 50px 0 50px 0;
+}
+
+.icon {
+    background-color: var(--white);
+    border-radius: 50%;
+    padding:1rem;
+    display:inline-block;
+    height: 1rem;
+    width: 1rem;
+}
+
+i {
+    margin: 0 !important;
+}
+
+.visible {
+    visibility: visible;
+}
+.invisible {
+    visibility: hidden;
+}
+
+.fade-1000, .fade-800, .fade-600, .fade-400 {
+    animation: fadeInUp steps(100) both;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
+.fade-1000-steps {
+    animation-duration: 1000ms;
+}
+.fade-1000 {
+    animation-duration: 1000ms;
+}
+.fade-800 {
+    animation-duration: 800ms;
+}
+.fade-600 {
+    animation-duration: 600ms;
+}
+.fade-400 {
+    animation-duration: 400ms;
+}
+.fade-800-steps {
+    animation-duration: 800ms;
+}
+
+.fade-1000-steps, .fade-800-steps, .fade-600-steps, .fade-400-steps {
+    animation: fadeInUp steps(100) both;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+    animation-timeline: view();
+    animation-range: entry 0% contain 10%;
+}
+.fade-800-steps{
+    animation-duration: 800ms;
+}
+.fade-600-steps {
+    animation-duration: 600ms;
+}
+
+.fade-400-steps {
+    animation-duration: 400ms;
+}
+
+
+
+html{}
+
+*{
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    color: var(--black);
+}
+
+.white{color:var(--white);}
+.black{color:var(--black);}
+.blue{color:var(--blue)}
+.bg-white{background-color: var(--white);}
+.bg-gray{background-color: var(--gray);}
+.bg-dark-gray{background-color: var(--dark-gray);}
+.left{float:left;}
+.right{float:right;}
+.clear{clear:both;}
+.links, a{color: #0000ee; text-decoration: underline;}
+.text-left{text-align: left;}.text-center{text-align:center}
+.center{margin:0 auto;}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+ul {
+    padding-inline-start: 40px;
+}
+ul > li, p{
+    font-size: 14pt;
+}
+ul > li {
+    list-style:disc;
+}
+
+h1{
+    font-family: bungee, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 40px;
+    position: relative;
+    top: 76%;
+}
+
+h2{
+    font-family: source-serif-pro, serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 22px;
+    margin: 0;
+}
+
+.description{
+    font-family: source-serif-pro, serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.description a{
+    font-weight: 400;
+}
+
+
+.divider{
+    padding: 10px 0;
+    clear:both;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(20px);
+      -ms-transform: translateY(20px);
+      transform: translateY(20px);
+    }
+  
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+    }
+  }

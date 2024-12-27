@@ -11,14 +11,17 @@
 		<!-- <link rel="stylesheet" href="https://use.typekit.net/vic3gzo.css"> -->
 		<link rel="stylesheet" href="https://use.typekit.net/bsu0rwg.css">
 		
-		<link rel="stylesheet" type="text/css" media="(min-width:651px) and (max-width:900px)" href="css/tablet.css">
-		<link rel="stylesheet" type="text/css" media="screen and (max-width:650px)" href="css/mobile.css">
-		<link rel="stylesheet" type="text/css" media="screen and (min-width:901px)" href="css/desktop.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" media="(min-width:1000px) and (max-width:1350px)" href="css/three-columns.css"/>
+		<link rel="stylesheet" type="text/css" media="(min-width:651px) and (max-width:999px)" href="css/two-columns.css"/>
+		<link rel="stylesheet" type="text/css" media="screen and (max-width:650px)" href="css/mobile.css"/>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
+
         
 <!--
 		<link rel="stylesheet" type="text/css" href="css/desktop.css">
 	-->	
-		
+		<!--
 		<script>
 				var image1=new Image();
 				image1.src="images/daniel-tomov.JPG";
@@ -28,130 +31,244 @@
 					image3.src="images/tsa.jpg";
 				var image4=new Image();
 					image4.src="";
-		</script>
+		</script>-->
     </head>
 
     <body>
-        <div id="entry">
-			<!--<img name="slide" id="slideshow" src="images/main.jpg"/> -->
-			<!--
-			<script>
-				var step=1;
-				function slideit() {
-					document.images.slide.src=eval("image"+step+".src");
-					//document.getElementById("entry").style.backgroundImage='url(eval("image"+step+".src"))';
-                    if(step<4) {step++; }
-                    else {step = 1; }
-				    setTimeout("slideit()",5000);
-				}
-				slideit();
-			</script>
--->
-			<h1 class="white center">Daniel Tomov</h1>
-        </div>
+      <div id="entry">
+				<!--<img name="slide" id="slideshow" src="images/main.jpg"/> -->
+				<!--
+				<script>
+					var step=1;
+					function slideit() {
+						document.images.slide.src=eval("image"+step+".src");
+						//document.getElementById("entry").style.backgroundImage='url(eval("image"+step+".src"))';
+											if(step<4) {step++; }
+											else {step = 1; }
+							setTimeout("slideit()",5000);
+					}
+					slideit();
+				</script>-->
+				<h1 id="entry-text" class="white text-center fade-1000">Daniel Tomov</h1>
+			</div>
 
-        <main>
+    <main>
 			<div class="divider"></div>
-			<div id="intro">
+			<div id="intro" class="section">
 				<div id="left">
-					<p><strong>Obsessed IT Enthusiast with an impressive home lab. Dedicated to learning new things and using known skills to find solutions to everyday problems. Plagued with the overwhelming urge to tinker and figure out solutions to everyday problems using technology.</strong></p>
+					<p class="fade-400-steps"><strong>IT enthusiast with a passion for computer networking. Dedicated to learning new things and solving problems. Plagued with the overwhelming urge to tinker and solve everyday problems using technology.</strong></p>
 					
 					<div class="divider"></div>
 					
-					<p>Recieved many certifications throughout his education including Microsoft Office Associate, CompTIA Security+, Network+, CySA+ (Cybersecurity Analyst+), GSEC, and JNCIA-Junos. </p>
+					<p class="fade-400-steps">Recieved many certifications throughout his education including CompTIA Security+, CompTIA Network+, CompTIA CySA+, CompTIA Cloud+, GIAC Security Essentials (GSEC), GIAC Cloud Security Essentials (GCLD), and Microsoft Office Associate, and JNCIA-Junos. Currently pursuing the Cisco Certivied Network Associate (CCNA) Certification.</p>
 					<div class="divider"></div>
-					<a class="links center" href="media/Daniel-Tomov-Resume.pdf"><p class="links">Download Resume</p></a>
+					<!--<a class="links center" href="resume"><p class="links">View Resume</p></a>-->
 				</div>
-				<div id="right">
-					<h2>Contact Me:</h2>
-					<p class="description">Email: <a href="mailto:danielstomov@gmail.com" class="links">danielstomov@gmail.com</a></p>
+				<div id="right" class="fade-400-steps">
+					<h2>External Links:</h2>
+					<p id="email-big" class="description">Email: <a href="mailto:contact@danieltomov.com" class="links">contact@danieltomov.com</a></p>
+					<p id="email-small" class="description">Email: <a href="mailto:contact@danieltomov.com" onclick="alert('contact@danieltomov.com')" class="links">Click</a></p>
 					<p class="description">LinkedIn: <a class="links" href="https://www.linkedin.com/in/danielstomov/">Daniel Tomov</a></p>
 					<p class="description">Github: <a class="links" href="https://github.com/Daniel-Tomov">Daniel-Tomov</a></p>
-					<p class="description">Youtube: <a class="links" href="https://www.youtube.com/channel/UCUVEqe302eSgApI5qHvna3Q">Daniel Tomov</a></p>
-					<!--<p class="description">Twitter: <a class="links" href="https://twitter.com/Daniel_Tomov">@Daniel_Tomov</a></p>-->
+					<p class="description">Youtube: <a class="links" href="https://www.youtube.com/@danielstomov">Daniel Tomov</a></p>
 				
 				</div>
 			</div>
 
-			<div class="divider"></div><div class="divider"></div><div class="divider"></div>
+			<div class="divider"></div><div class="divider"></div>
+			<hr/>
+			<div id="work-experience" class="clear section center bg-gray">
+				<h1 class="black text-center fade-400-steps">Work Experience</h1>
+				<div class="item fade-400-steps">
+					<h2 class="text-left">Old Dominion University - Pilot Cyber Clinic</h2>
+					<h5 class="text-left">January 2024 - May 2024</h5>
+					<ul class="text-left">
+						<li class="fade-400-steps">Composed phishing training for a client. The training included definitions and custom phishing attacks.</li>
+						<li class="fade-400-steps">Designed an incident response plan for a client.</li>
+						<li class="fade-400-steps">Developed a tabletop exercise for a client.</li>
+					</ul>
+				</div>
+			</div>
+			<hr/>
+			<div id="education" class="clear section center bg-white">
+				<h1 class="black text-center fade-400-steps">Education</h1>
+				<div class="item">
+					<h2 class="text-left fade-400-steps">Old Dominion University</h2>
+					<p class="text-left fade-400-steps">Graduating: Spring 2026</p>
+					<p class="text-left fade-400-steps">Degree: Cyber Operations.<br/>This degree is designated by the National Security Agency as NSA-CAE as a CAE-CO program. Programs with this designation are highly technical, and are grounded in computer science, computer engineering, and cybersecurity, with exentsive opportunities for hands-on applications through labs and exercises.<sup>[1]</sup></p>
 
-			<div id="certifications" class="clear section">
-				<h1 class="black center">Certifications</h1>
+					<div class="divider"></div>
+					<h3 class="text-left fade-400-steps">Relevant Coursework</h3>
+					<p class="text-left fade-400-steps">CYSE 301: Cybersecurity Techniques and Operations</p>
+					<ul class="text-left fade-400-steps">
+						<li>Basic experience with Microsoft Hyper-V, pfSense, Nmap, Nessus, and Metasploit</li>
+					</ul>
+				</div>
+				
 				<div class="divider"></div><div class="divider"></div>
-				<div class="even-space holder grid-container">
-					<div class="cert">
-						<h2>IC3 (Internet and Computing Core) Digital Literacy Certification</h2>
-						<img class="cert-img" src="images/ic3.jpg" alt="IC3 Certification image"/>
-						<!--<p class="description">Earned in IT Fundamentals during the 2019-2020 school year at Landstown High School. The course covered the Microsoft Office suite and web design.</p>-->
-						<a class="description" href="media/IC3.pdf">View this certification</a>
+				<p><sup>[1]</sup><a href="https://www.nsa.gov/Academics/Centers-of-Academic-Excellence/">NSA website</a></p>
+				<div class="divider"></div>
+			</div>
+
+			<hr/>
+
+			<div id="projects" class="clear section center bg-gray">
+				<h1 class="black text-center fade-400-steps">Projects</h1>
+				<div class="center">
+					<div class="item">
+						<h2 class="fade-400-steps">Homelab - Proxmox Server</h2>
+						<h5 class="fade-400-steps">4 CPU cores 16 GB of RAM</h5>
+						<ul class="text-left">
+							<li class="fade-400-steps">Configured an <a href="https://opnsense.org/">OPNsense firewall</a> and a Cisco switch to create VLANs to segment the network for private, wireless, security devices, and services. Also configured site-to-site VPN between OPNsense instances.</li>
+							 <li class="fade-400-steps">Utilized Cloudflare Zero Trust to generate a secure tunnel between clients and the Home Lab. Configured client certificates and WAF rules to further control which devices can access private services in the Home Lab. Read about the process at the <a href="/blog/blog-cloudflare-mtls.html">blog post</a>. </li>
+							<li class="fade-400-steps">Implemented Portainer to manage Docker standalone and Docker Swarm instances in the Homelab.</li>
+							<li class="fade-400-steps">Programmed a nginx webserver as a reverse proxy so all services are accessed with a certificate.</li>
+							<li class="fade-400-steps">Customized an <a href="https://immich.app/">Immich</a> server to backup photos and videos from mobile devices.</li>
+							<li class="fade-400-steps">Designed Home Assistant to control Internet of Things (IoT) devices from different brands in the house.</li>
+							<li class="fade-400-steps">Built a Pi-Hole Domain Name System (DNS) server to monitor DNS requests.</li>
+							<li class="fade-400-steps">Identified and fixed vulnerabilities identified by SIEM server Wazuh.</li>
+							<li class="fade-400-steps">Created an OpenVPN server and client to route traffic from an external device through the VPN client to the server. Read more about this project on the <a href="https://danieltomov.com/blog/blog-routing-over-vpn.html">blog post</a>.</li>
+						</ul>
 					</div>
-					<div class="cert">
-						<h2>CTECS Workplace Readiness</h2>
-						<img class="cert-img" src="images/workplaceReadiness.png" alt="Workplace Readiness Certification image"/>
-						<!--<p class="description">Earned in the 2020-2021 school year. The test consists of 100 situations that may be seen in the workplace. Landstowh High School requires all students in the academy to have this certification.</p>-->
+					<div class="divider"></div><hr/><div class="divider"></div>
+					<div class="item">
+						<h2 class="fade-400-steps">Python Programming</h2>
+						<ul class="text-left">
+							<li class="fade-400-steps">Made software to provision Proxmox virtual machines on a Proxmox cluster using the Proxmox API. Clients access their machine through a clientless VPN.<br/><a class="links" href="https://github.com/daniel-tomov/cloud">github.com/daniel-tomov/cloud</a></li>
+							<li class="fade-400-steps">Created a Discord bot for the ODU Cyber Security Student Association Discord Server.<br/>View on GitHub: <a  class="links" href="https://github.com/Cybersecurity-Student-Association/bluebot/tree/python">github.com/Cybersecurity-Student-Association/bluebot/tree/python</a></li>
+							<li class="fade-400-steps">Programed a website with the goal of teaching students the Python programming language to increase their interest in the STEM field.<br/>View on GitHub: <a class="links" href="https://github.com/Daniel-Tomov/codemonkey">github.com/Daniel-Tomov/codemonkey</a></a></li>
+							<li class="fade-400-steps">Built an application to control the Open Broadcasting Software through a browser. The intention is to open the site on a tablet and control OBS through the interface.<br/>View on GitHub: <a href="https://github.com/Daniel-Tomov/PythonStreamDeck" class="links">github.com/Daniel-Tomov/PythonStreamDeck</a></li>
+						</ul>
 					</div>
-					<div class="cert">
-						<h2>Microsoft Office Associate</h2>
-						<img class="cert-img" src="images/office.svg" alt="Microsoft Office Associate Certification image"/>
-						<!--<p class="description">Earned in Computer information Systems during the 2020-2021 school year. The course covers a portion of the Microsoft 2019 Office Suite (Word, PowerPoint, and Excel).</p>-->
-						<a class="description" href="media/MSOffice.pdf">View this certification</a>
+					<div class="divider"></div><hr/><div class="divider"></div>
+					<div class="item">
+						<h2 class="fade-400-steps">Java Programming: Minecraft Server Plugins</h2>
+						<ul class="text-left">
+							<li class="fade-400-steps">AddHearts - Creates eddible hearts players can consume to gain an extra heart. The recipe is customizable in the configuration file.<br/>View on Modrinth: <a href="https://modrinth.com/plugin/ediblehearts">modrinth.com/plugin/ediblehearts</a><br/>View on GitHub: <a href="https://github.com/Daniel-Tomov/AddHearts">github.com/Daniel-Tomov/AddHearts</a></li>
+							<li class="fade-400-steps">NoPlayerFreeze - Freezes the server tick when no players online to save server resources.<br/>View on Modrinth: <a href="https://modrinth.com/plugin/noplayerfreeze">modrinth.com/plugin/noplayerfreeze</a><br/>View on GitHub: <a href="https://github.com/Daniel-Tomov/NoPlayerFreeze">github.com/Daniel-Tomov/NoPlayerFreeze</a></li>
+							<li class="fade-400-steps">WesternStandoff - Adds western standoff type battles to a Minecraft server.<br/>View on GitHub: <a href="https://github.com/Daniel-Tomov/WesternStandoff">github.com/Daniel-Tomov/WesternStandoff</a></li>
+						</ul>
 					</div>
-					<div class="cert">
-						<h2>MTA Database Administration</h2>
-						<img class="cert-img" src="images/mtaDatabase.png" alt="MTA Database Administraion Certification image"/>
-						<!--<p class="description">Earned in Database Management and Administration during the 2021-2022 school year. The course uses the Oracle Academy program for the lessons.</p>-->
-						<a class="description" href="media/MTADatabase.pdf">View this certification</a>
+					<div class="divider"></div><hr/><div class="divider"></div>
+					<div class="item">
+						<h2 class="fade-400-steps">HTML, CSS, and JavaScript, Domain Name Configuration</h2>
+						<ul class="text-left">
+							<li class="fade-400-steps">Utilized GitHub Pages to create a professional website. Bought the domain from Cloudflare, protected it with Cloudflare WAF, and setup encryption with an SSL/TLS Certificate.<br/>View on GitHub: <a href="https://github.com/daniel-tomov/daniel-tomov.github.io">github.com/daniel-tomov/daniel-tomov.github.io</a></li>
+						</ul>
 					</div>
-					<div class="cert">
-						<h2>CompTIA Security+</h2>
-						<img class="cert-img" src="images/securityPlus.png" alt="CompTIA Security+ Certification image"/>
+				</div>
+				<div class="divider"></div>
+			</div>
+			<hr/>
+
+			<div id="certifications" class="clear section center bg-white">
+				<h1 class="black text-center fade-400-steps">Certifications</h1>
+				<h2 class="text-center fade-400-steps">CompTIA</h2>
+				<div class="divider"></div>
+				<div class="center grid-container">
+					<div class="item fade-400-steps">
+						<h3>CompTIA Security+</h3>
+						<img class="item-img" src="/images/securityPlus.png" alt="CompTIA Security+ Certification image"/>
 						<!--<p class="description">The teacher for the Security+ class at school offered me the voucher because they saw my interest in the field of Cybersecurity.</p>-->
-						<a class="description" href="media/securityPlus.pdf">View this certification</a>
+						<a class="description" href="/media/securityPlus.pdf">View this certification</a>
 					</div>
-					<div class="cert">
-						<h2>CompTIA CySA+</h2>
-						<img class="cert-img" src="images/cysaPlus.png" alt="CompTIA CySA+ Certification image"/>
+					<div class="item fade-400-steps">
+						<h3>CompTIA CySA+</h3>
+						<img class="item-img" src="/images/cysaPlus.png" alt="CompTIA CySA+ Certification image"/>
 						<!--<p class="description">Taken just to test my knowledge, since the exam was offered at a discount.</p>-->
-						<a class="description" href="media/cysaPlus.pdf">View this certification</a>
+						<a class="description" href="/media/cysaPlus.pdf">View this certification</a>
 					</div>
-					<div class="cert">
-						<h2>CompTIA Security Analytics Profssional</h2>
-						<img class="cert-img" src="images/csap.png" alt="CompTIA Security Analytics Profssional"/>
+					<div class="item fade-400-steps">
+						<h3>CompTIA Security Analytics Profssional</h3>
+						<img class="item-img" src="/images/csap.png" alt="CompTIA Security Analytics Profssional"/>
 						<!--<p class="description">Recieved when both Security+ and CySA+ were passed.</p>-->
-						<a class="description" href="media/csap.pdf">View this certification</a>
+						<a class="description" href="/media/csap.pdf">View this certification</a>
 					</div>
-					<div class="cert">
-						<h2>CompTIA Network+</h2>
-						<img class="cert-img" src="images/networkPlus.png" alt="CompTIA Network+ Certification image"/>
+					<div class="item fade-400-steps">
+						<h3>CompTIA Network+</h3>
+						<img class="item-img" src="/images/networkPlus.png" alt="CompTIA Network+ Certification image"/>
 						<!--<p class="description">Taken as a class outside of school.</p>-->
-						<a class="description" href="media/networkPlus.pdf">View this certification</a>
+						<a class="description" href="/media/networkPlus.pdf">View this certification</a>
 					</div>
-					<div class="cert">
-						<h2>GIAC Foundational Cybersecurity Technologies (GFACT)</h2>
-						<img class="cert-img" src="images/gfact.png" alt="GFACT Certification Image"/>
+					<div class="item fade-400-steps">
+						<h3>CompTIA Cloud+</h3>
+						<img class="item-img" src="/images/cloudPlus.png" alt="CompTIA Network+ Certification image"/>
+						<!--<p class="description">Taken as a class outside of school.</p>-->
+						<a class="description" href="/media/cloudPlus.pdf">View this certification</a>
+					</div>
+					<div class="item fade-400-steps">
+						<h3>CompTIA Cloud Admin Professional</h3>
+						<img class="item-img" src="/images/ccap.jpg" alt="CompTIA Network+ Certification image"/>
+						<!--<p class="description">Taken as a class outside of school.</p>-->
+						<a class="description" href="/media/ccap.pdf">View this certification</a>
+					</div>
+					<div class="item fade-400-steps">
+						<h3>CompTIA Cloud Security Professional</h3>
+						<img class="item-img" src="/images/cscp.jpg" alt="CompTIA Network+ Certification image"/>
+						<!--<p class="description">Taken as a class outside of school.</p>-->
+						<a class="description" href="/media/cscp.pdf">View this certification</a>
+					</div>
+				</div>
+				
+				<div class="divider"></div><hr/><div class="divider"></div>
+
+				<h2 class="text-center fade-400-steps">GIAC</h2>
+				<div class="center grid-container">
+					<div class="item fade-400-steps">
+						<h3>GIAC Foundational Cybersecurity Technologies (GFACT)</h3>
+						<img class="item-img" src="/images/gfact.png" alt="GFACT Certification Image"/>
 						<!--<p class="description">Won the course as a part of the NCSF Scholarship. Had to get National Cuber Scholar to get the course.</p>-->
 						<a class="description" href="https://www.credly.com/badges/8edaa0d5-3a02-4f1d-83cd-d7bcfc228c4e">View this certification</a>
 					</div>
-					<div class="cert">
-						<h2>GIAC Security Essentials Certification (GSEC)</h2>
-						<img class="cert-img" src="images/gsec.png" alt="GSEC Certification Image"/>
+					<div class="item fade-400-steps">
+						<h3>GIAC Security Essentials Certification (GSEC)</h3>
+						<img class="item-img" src="/images/gsec.png" alt="GSEC Certification Image"/>
 						<!--<p class="description">Won the course as a part of the NCSF Scholarship. This one of the levels after the GFACT. Participants get the oppertunity to take the GSEC if they previously did GFACT.</p>-->
 						<a class="description" href="https://www.credly.com/badges/6c2e494d-91ac-407d-809c-ef6a06b6dcc2">View this certification</a>
 					</div>
-					<div class="cert">
-						<h2>GIAC Cloud Security Essentials (GLCD)</h2>
-						<img class="cert-img" src="images/gcld.png" alt="GCLD Certification Image"/>
+					<div class="item fade-400-steps">
+						<h3>GIAC Cloud Security Essentials (GLCD)</h3>
+						<img class="item-img" src="/images/gcld.png" alt="GCLD Certification Image"/>
 						<!--<p class="description">Won the course as a part of the NCSF Scholarship. This one of the levels after the GFACT. Participants get the oppertunity to take the GCLD if they previously did GFACT.</p>-->
 						<a class="description" href="https://www.credly.com/badges/b72d7cfb-d37f-4ab2-a00d-cda7832bb5f7">View this certification</a>
 					</div>
-					<div class="cert">
-						<h2>JNCIA-Junos</h2>
-						<img class="cert-img" src="images/jnciaJunos.png" alt="JNCIA-Junos Certification Image"/>
+				</div>
+				
+				<div class="divider"></div><hr/><div class="divider"></div>
+
+				<div class="center grid-container">
+					<div class="item fade-400-steps">
+						<h3>IC3 (Internet and Computing Core) Digital Literacy Certification</h3>
+						<img class="item-img" src="/images/ic3.jpg" alt="IC3 Certification image"/>
+						<!--<p class="description">Earned in IT Fundamentals during the 2019-2020 school year at Landstown High School. The course covered the Microsoft Office suite and web design.</p>-->
+						<a class="description" href="/media/IC3.pdf">View this certification</a>
+					</div>
+					<div class="item fade-400-steps">
+						<h3>CTECS Workplace Readiness</h3>
+						<img class="item-img" src="/images/workplaceReadiness.png" alt="Workplace Readiness Certification image"/>
+						<!--<p class="description">Earned in the 2020-2021 school year. The test consists of 100 situations that may be seen in the workplace. Landstowh High School requires all students in the academy to have this certification.</p>-->
+					</div>
+					<div class="item fade-400-steps">
+						<h3>Microsoft Office Associate</h3>
+						<img class="item-img" src="/images/office.svg" alt="Microsoft Office Associate Certification image"/>
+						<!--<p class="description">Earned in Computer information Systems during the 2020-2021 school year. The course covers a portion of the Microsoft 2019 Office Suite (Word, PowerPoint, and Excel).</p>-->
+						<a class="description" href="/media/MSOffice.pdf">View this certification</a>
+					</div>
+					<div class="item fade-400-steps">
+						<h3>MTA Database Administration</h3>
+						<img class="item-img" src="/images/mtaDatabase.png" alt="MTA Database Administraion Certification image"/>
+						<!--<p class="description">Earned in Database Management and Administration during the 2021-2022 school year. The course uses the Oracle Academy program for the lessons.</p>-->
+						<a class="description" href="/media/MTADatabase.pdf">View this certification</a>
+					</div>
+					<div class="item fade-400-steps">
+						<h3>JNCIA-Junos</h3>
+						<img class="item-img" src="/images/jnciaJunos.png" alt="JNCIA-Junos Certification Image"/>
 						<!--<p class="description">Taken as part of the Network Chuck 30 Day Certification Challenge.</p>-->
-						<a class="description" href="media/JNCIAJunos.pdf">View this certification</a>
+						<a class="description" href="/media/JNCIAJunos.pdf">View this certification</a>
 					</div>
 				</div>
-				<p class="description clear center">For more information, go to my <a class="links" href="https://www.linkedin.com/in/daniel-s-tomov/details/certifications/">LinkedIn</a> or my <a class="links" href="https://www.credly.com/users/daniel-s-tomov/badges">Credly</a></p>
+				<div class="divider"></div>
+				<p class="description clear text-center fade-400-steps">For more information, go to my <a class="links" href="https://www.linkedin.com/in/danielstomov/details/certifications/">LinkedIn</a> or my <a class="links" href="https://www.credly.com/users/daniel-s-tomov/badges">Credly</a></p>
 				<div class="divider"></div>
 				<!--
 				<div class="item">
@@ -159,43 +276,60 @@
 					<img class="item-mg" href=""/>
 				</div>
 				-->
-				<div class="divider"></div>
 			</div>
+			<div class="divider"></div>
+			<hr/>
 			
-			<div id="blog" class="clear section">
-				<h1 class="black center">Blog</h1>
-				<p class="center">I have launched a blog section on my website! I will post compeitions and conferences I attend there. Visit the blog here: <a class="links" href="blog/index.html">https://danieltomov.com/blog</a></p>
+			<div id="blog" class="clear section center bg-gray">
+				<h1 class="black text-center fade-400-steps">Blog</h1>
+				<p class="text-center fade-400-steps">I have launched a blog section on my website! I will post compeitions and conferences I attend there. Visit the blog here: <a class="links" href="blog/index.html">danieltomov.com/blog</a></p>
 			</div>
-			<div id="e-portfolio" class="clear section">
-				<h1 class="black center">E-Portfolio</h1>
-				<p class="center">The E-Portfolio is a required component of the Cyber Operations major at ODU. Visit the E-Portfolio here: <a class="links" href="https://danieltomov.com/e-portfolio">https://danieltomov.com/e-portfolio</a></p>
+			<div id="e-portfolio" class="clear section center bg-gray">
+				<h1 class="black text-center fade-400-steps">E-Portfolio</h1>
+				<p class="text-center fade-400-steps">The E-Portfolio is a required component of the Cyber Operations major at ODU. Visit the E-Portfolio here: <a class="links" href="https://danieltomov.com/e-portfolio">danieltomov.com/e-portfolio</a></p>
 			</div>
 
-			<!--<div id="accomplishments" class="clear section">
+			<!--<div id="items" class="clear section">
 				<h1 class="black center">Accomplishments</h1>
 				<div class="divider"></div><div class="divider"></div>
-				<div class="even-space grid-container">
-					<div class="accomplishment">
+				<div class="center grid-container">
+					<div class="item">
 						<h2>MATE ROV Competitions</h2>
-						<img class="accomplishment-img" src="images/mate.jpg" alt="Daniel holds the trophy for first place in the MATE ROV 2022 Mid-Atlantic Regional compeition"/>
+						<img class="item-img" src="images/mate.jpg" alt="Daniel holds the trophy for first place in the MATE ROV 2022 Mid-Atlantic Regional compeition"/>
 						<p class="description">Participating in the Competition for four years, Daniel has led the team at school for three of them. The team made it to the 2022 World Championship.</p>
 					</div>
-					<div class="accomplishment">
+					<div class="item">
 						<h2>TSA 2022</h2>
-						<img class="accomplishment-img" src="images/tsa_edited.png" alt="Daniel holds the trophy for third place in the TSA cybersecurity compeition"/>
+						<img class="item-img" src="images/tsa_edited.png" alt="Daniel holds the trophy for third place in the TSA cybersecurity compeition"/>
 						<p class="description">This being his first TSA compeition, Daniel paricipated in the Cybersecurity part of it. It consisted of a Capture the Flag (CTF) challenge. The team recieved third place in the state.</p>
 					</div>
 				</div>
 			</div>-->
 		</main>
 
-        <footer class="center">
-            <p>Copyright &copy; 2023 Daniel Tomov</p>
-        </footer>
+    <footer id="footer" class="text-center bg-dark-gray white">
+        <p class="white">Copyright &copy; year Daniel Tomov</p>
+				<div class="icon">
+					<a href="https://www.linkedin.com/in/danielstomov">
+						<i class="icon-linkedin"></i>
+					</a>
+				</div>
+				<div class="icon">
+					<a href="https://github.com/Daniel-Tomov">
+						<i class="icon-github"></i>
+					</a>
+				</div>
+				<div class="icon">
+					<a href="https://youtube.com/@danielstomov">
+						<i class="icon-youtube-play"></i>
+					</a>
+				</div>
+    </footer>
 
 		<script>
 			document.getElementById("entry").style.height=window.innerHeight + "px";
 			document.getElementById("entry").style.backgroundSize="auto " + window.innerHeight + "px";
+			document.getElementsByTagName("footer")[0].firstElementChild.innerHTML = document.getElementsByTagName("footer")[0].firstElementChild.innerHTML.replace("year", new Date().getFullYear());
 		</script>
 		
 		<!-- Google tag (gtag.js) -->
